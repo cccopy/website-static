@@ -1,0 +1,79 @@
+<script>
+    //密碼判斷是否出現眼睛
+    const body = document.querySelector("body");
+    const togglePassword = document.querySelectorAll("[data-togglePassword]");
+    togglePassword.forEach((element) => {
+        const input = element.querySelector("input");
+        const eye = element.querySelector(".eye");
+        eye.addEventListener("click", function (e) {
+            eye.classList.toggle("--show");
+            if (input.type === "password") {
+                input.type = "text";
+            } else {
+                input.type = "password";
+            }
+        });
+    });
+
+    body.addEventListener("keyup", function (e) {
+        var target = e.target;
+        var type = target.type;
+        var parent = target.parentNode;
+
+        if (type == "password") {
+            if (target.value != "") {
+                // console.log('有值');
+                parent.classList.add("show-eye");
+            } else {
+                //console.log('空值');
+                parent.classList.remove("show-eye");
+            }
+        } else {
+        }
+    });
+
+    /*操作 modal*/
+    let currentLevel = 0;
+    const modals = document.querySelectorAll("[data-modal]");
+    const modalBtns = document.querySelectorAll("[data-openmodal]");
+    modalBtns.forEach((element) => {
+        element.addEventListener("click", function (e) {
+            var id = element.dataset.openmodal;
+            var target = document.querySelector("#" + id);
+            // currentLevel = currentLevel + 1;
+            // var layerClass = "layer-" + currentLevel;
+            // var showLayerClass = "has-layer-" + currentLevel;
+            // currentModal = target;
+            // console.log('you click ' + id);
+            // console.log(target);
+            // console.log(currentModal);
+            target.classList.add("--active");
+            // target.classList.add(layerClass);
+            body.classList.add("has-modal");
+            e.preventDefault();
+
+            //           element.classList.remove('active');
+            if ("autoclose" in element.dataset) {
+                console.log("有的");
+                setTimeout(() => {
+                    target.classList.remove("active");
+                    body.classList.remove("has-modal");
+                }, 1500);
+            } else {
+            }
+        });
+    });
+
+    modals.forEach((element) => {
+        var modalBody = element.querySelector(".modal-container");
+        var modalClose = element.querySelectorAll("[data-close]");
+        var modalsBack = element.querySelector("[data-back]");
+
+        modalClose.forEach((close) => {
+            close.addEventListener("click", function () {
+                element.classList.remove("--active");
+                body.classList.remove("has-modal");
+            });
+        });
+    });
+</script>
