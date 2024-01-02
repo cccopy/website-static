@@ -1,1 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13"><g data-name="Group 2"><path data-name="Path 4" d="M4.97 11.189L.312 6.765a1 1 0 011.377-1.45l3.125 2.967L9.848 2.35a1 1 0 111.525 1.294z" fill="var(--color-white)"/><path data-name="Rectangle 19" fill="none" d="M0 0h13v13H0z"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13">
+  <g id="Group_2" data-name="Group 2" transform="translate(-1210 -308)">
+    <path id="Path_4" data-name="Path 4" d="M1214.243,321.6l-4.658-4.424a1,1,0,0,1,1.377-1.45l3.125,2.967,5.034-5.932a1,1,0,1,1,1.525,1.294Z" transform="translate(0.727 -2.411)" fill="var(--color-white)"/>
+    <rect id="Rectangle_19" data-name="Rectangle 19" width="13" height="13" transform="translate(1210 308)" fill="none"/>
+  </g>
+</svg>
