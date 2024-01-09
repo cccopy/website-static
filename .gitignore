@@ -13,5 +13,6 @@ Recaptcha.php
 *.tmp
 config.php
 *.mp4
-
+ /_*
+  /_*.*
 
