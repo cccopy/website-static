@@ -1,0 +1,382 @@
+.breadcrumb {
+    font-size: 0.875em;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    a {
+        color: #00000061;
+        transition: color 0.3s $ease;
+        & + a {
+            &:before {
+                content: "/";
+                display: inline-block;
+                margin: 0 10px 0 5px;
+            }
+            &:last-of-type {
+                color: #000;
+                &:before {
+                    color: #00000061;
+                }
+            }
+        }
+        @media (hover: hover) {
+            &:hover {
+                color: #000;
+            }
+        }
+    }
+}
+
+.tag {
+    font-size: 11px;
+    background-color: #f5f5f5;
+    color: #757575;
+    line-height: 1.25em;
+    min-height: 18px;
+    display: flex;
+    align-items: center;
+    padding: 0 1em;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    border-radius: 20px;
+    margin: 0 3px 3px 0;
+    transition: all 0.35s $ease;
+    transition-property: background-color, color;
+    @include xs_lg {
+        min-height: 20px;
+    }
+    @media (hover: hover) {
+        &:hover {
+            background-color: $color-second;
+            color: #000;
+        }
+    }
+}
+
+.tag-area {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mega-search {
+    display: flex;
+    border: 4px solid $black30;
+    overflow: hidden;
+    @include xs_sm {
+        flex-direction: column;
+        border-radius: $rd;
+        border-color: $color-main;
+    }
+    @include sm {
+        border-radius: 40px;
+    }
+    input,
+    select {
+        line-height: 52px;
+        height: 52px;
+        width: 100%;
+        padding: 0 0.5em;
+        border: none;
+        background: none;
+        outline: none;
+        box-shadow: none;
+        -webkit-appearance: none;
+        appearance: none;
+        cursor: pointer;
+        font-family: $font-read;
+        font-size: 1em;
+        background-color: #fff;
+        font-weight: 500;
+        @include sm {
+            line-height: 68px;
+            height: 68px;
+        }
+        &:-webkit-autofill,
+        &:-webkit-autofill:hover,
+        &:-webkit-autofill:focus {
+            border: none;
+            -webkit-text-fill-color: #000;
+            -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+            transition: background-color 5000s ease-in-out 0s;
+        }
+        @include sm {
+            font-size: 1.125em;
+            padding: 0 1em 0 1.5em;
+        }
+    }
+    input {
+        @include xs_sm {
+            font-size: 1.25em;
+        }
+    }
+    select {
+        background: #fff url("../images/arrow-select.svg") no-repeat right 8px center;
+        background-size: 12px auto;
+        @include xs_sm {
+            border-bottom: 1px solid $color-main;
+            line-height: 40px;
+            height: 40px;
+        }
+        // @include md {
+        //     padding-left: 1em;
+        // }
+    }
+    .category {
+        @include sm {
+            width: 160px;
+            border-right: 4px solid $black30;
+        }
+    }
+    .keyword {
+        @include sm {
+            width: calc(100% - 160px);
+            position: relative;
+        }
+    }
+    .btn {
+        @include xs_sm {
+            width: 100%;
+            border-radius: 0;
+            height: 48px;
+            font-size: 1.25em;
+        }
+        @include sm {
+            position: absolute;
+            height: calc(100% - 16px);
+            top: 8px;
+            right: 8px;
+        }
+    }
+}
+.mega-search-container {
+    @include xs_md {
+        padding: 0 $pd-xs;
+    }
+}
+
+.map-ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    .fz-A,
+    .fz-B {
+        line-height: 1em;
+    }
+    > li {
+        display: flex;
+        list-style: none;
+        align-items: flex-end;
+    }
+    .value {
+        display: flex;
+    }
+    .field {
+        font-size: 0.875em;
+    }
+}
+.cooking-list {
+    background-color: $color-second;
+    padding-bottom: 14px;
+    position: relative;
+    overflow: hidden;
+    border-radius: $rd;
+    .clip {
+        width: 62%;
+        position: absolute;
+        left: 50%;
+        top: 4px;
+        //  border: 1px solid saddlebrown;
+        transform: translate(-50%, 0);
+        @include xxl {
+            top: 8px;
+        }
+        i {
+            background-color: $color-second;
+            display: block;
+            width: 62%;
+            height: 16px;
+            margin: 0 auto;
+            @include xxl {
+                height: 20px;
+            }
+        }
+        &:before,
+        &:after {
+            content: "";
+            display: block;
+            width: 52%;
+            height: 30px;
+            border: 4px solid $color-second;
+
+            position: absolute;
+            top: 6px;
+            @include xxl {
+                top: 8px;
+            }
+        }
+        &:after {
+            right: 0;
+            border-radius: 0 $rd/2 $rd/2 0;
+            border-left: none;
+        }
+        &:before {
+            left: 0;
+            border-radius: $rd/2 0 0 $rd/2;
+            border-right: none;
+        }
+    }
+    .paper {
+        background-color: #d9d9d9;
+        border-radius: 0 0 $rd $rd;
+        padding: 10px;
+        @include xxl {
+            padding: 16px;
+        }
+    }
+    ul {
+        display: block;
+        list-style: none;
+        border: 4px solid #e0e0e0;
+        border-radius: $rd;
+        padding: 36px 24px 24px 24px;
+        background-color: #fafafa;
+        counter-reset: num;
+        @include md {
+            padding: 40px 28px 28px;
+        }
+        @include xxl {
+            padding: 48px 36px 36px;
+        }
+    }
+    li {
+        border-bottom: 1px solid $color-second;
+        padding-top: 0.8em;
+        padding-bottom: 0.8em;
+        font-size: 1.25em;
+        line-height: 1.375em;
+        &:last-of-type {
+            padding-bottom: 0;
+            border: none;
+        }
+        // @include md {
+        //     font-size: 1.25em;
+        // }
+        @include xxl {
+            font-size: 1.375em;
+        }
+    }
+    .color-smaple {
+        display: inline-block;
+        vertical-align: middle;
+        width: 24px;
+        height: 24px;
+        border-radius: 12px;
+        border: 1px solid $color-black;
+        margin: -2px 2px 0 2px;
+    }
+    .field,
+    .value {
+        padding-left: 1.75em;
+        position: relative;
+    }
+    .value {
+        padding-top: 3px;
+    }
+    .field {
+        font-weight: bold;
+
+        &:before {
+            display: block;
+            counter-increment: num;
+            /*第一種寫法*/
+            content: counter(num);
+            font-family: $font-en;
+            width: 1.25em;
+            height: 1.25em;
+            padding-top: 1px;
+            background-color: $color-second;
+            border-radius: 50%;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            left: 0;
+            top: 0.1em;
+            flex-shrink: 0;
+        }
+    }
+    // &:after {
+    //     content: "";
+    //     display: block;
+    //     width: 100%;
+    //     height: $pd-xs;
+    //     background-color: $color-second;
+    //     z-index: -1;
+    //     position: absolute;
+    // }
+}
+
+.dev {
+    overflow: hidden;
+    .fz-D {
+        margin-bottom: $pd-xs;
+    }
+    @include xs_lg {
+        padding: $pd-xs;
+    }
+    .btn {
+        margin: 0 10px 10px 0;
+        padding-left: 0.75em;
+        padding-right: 0.75em;
+        border-radius: $rd-form * 2;
+        font-weight: normal;
+        font-size: 0.875em;
+        height: 35px;
+    }
+    .container {
+        border: 2px dashed $color-second;
+        padding: $pd-xs;
+        border-radius: $rd;
+        margin: 5vh auto;
+        background-color: rgba($color-second, 0.1);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+}
+
+.arrow-box {
+    position: relative;
+    background: #fff;
+    border: 4px solid $color-second-dark;
+    padding: 0.75em 1.75em;
+    display: flex;
+    width: max-content;
+    align-items: center;
+    border-radius: 40px;
+    transform-origin: center;
+    &:after,
+    &:before {
+        top: 100%;
+        left: 50%;
+        border: solid transparent;
+        content: "";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+    }
+
+    &:after {
+        border-color: rgba(136, 183, 213, 0);
+        border-top-color: #fff;
+        border-width: 14px;
+        margin-left: -14px;
+    }
+    &:before {
+        border-color: rgba(194, 225, 245, 0);
+        border-top-color: $color-second-dark;
+        border-width: 20px;
+        margin-left: -20px;
+    }
+}

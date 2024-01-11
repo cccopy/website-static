@@ -1,0 +1,381 @@
+.gt-header {
+    padding-top: $pd-xs * 2;
+    padding-bottom: $pd-xs;
+    background-color: #fff;
+    text-align: center;
+}
+.gt-body {
+    background-color: #fff9e9;
+    padding-top: $pd-xs * 1.5;
+    position: relative;
+
+    .container-s,
+    .container,
+    .container-full {
+        position: relative;
+        z-index: 2;
+    }
+    .part-top {
+        padding-bottom: $pd-xs;
+    }
+    .btn-area {
+        width: 100%;
+        padding-top: $pd-xs * 2;
+        padding-bottom: $pd-xs * 2;
+        align-items: center;
+        @include lg {
+            padding-bottom: clamp(40px, 8vh, 80px);
+        }
+        @include xxl {
+            padding-bottom: clamp(60px, 12vh, 120px);
+        }
+    }
+    .video-container {
+        border: 4px solid #fff;
+        box-shadow: $shadow-deco;
+        border-radius: $rd;
+        overflow: hidden;
+        margin-bottom: $pd-xs;
+    }
+    &.radius {
+        position: relative;
+        isolation: isolate;
+        background-color: #fff;
+        &:before {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            border-radius: 8.33vw 8.33vw 0 0;
+            background-color: #fff9e9;
+            z-index: -1;
+            position: absolute;
+        }
+    }
+}
+.gnerate-prepare {
+    @include lg {
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: $pd-xs * 2;
+    }
+    .title-holder {
+        transform-origin: center center;
+        transform: rotate(3deg);
+    }
+    .chief {
+        width: 100%;
+        background: url("../images/item/chief.png") no-repeat center;
+        background-size: contain;
+        animation: scale-chief 1.2s step-end infinite;
+        // mix-blend-mode: darken;
+
+        @include lg {
+            width: 80%;
+            margin: -3vh auto 0;
+        }
+        &:before {
+            content: "";
+            display: block;
+            width: 100%;
+            padding-bottom: 100%;
+        }
+    }
+    .part-left {
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-bottom: $pd-xs;
+
+        .fz-B {
+            text-align: center;
+        }
+        @include lg {
+            width: calc(100% - 320px);
+            flex-shrink: 0;
+            padding-right: $pd-xs * 1.5;
+        }
+        @include xxl {
+            width: calc(100% - 360px);
+        }
+        @include xxxl {
+            width: calc(100% - 420px);
+        }
+    }
+    .part-right {
+        @include lg {
+            width: 320px;
+        }
+        @include xxl {
+            width: 360px;
+        }
+        @include xxxl {
+            width: 420px;
+        }
+    }
+}
+@keyframes scale-chief {
+    0% {
+        transform: scale(0.95) rotate(-10deg);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.95) rotate(-10deg);
+    }
+}
+.gnerate-start {
+    @include lg {
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: $pd-xs * 2;
+    }
+
+    .part-left {
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-bottom: 20vh;
+        .fz-B {
+            text-align: center;
+        }
+        @include lg {
+            width: 52%;
+            flex-shrink: 0;
+            padding: 0 $pd-xs * 1.5 20vh 0;
+        }
+
+        &:after {
+            content: "";
+            display: block;
+            width: 100%;
+            padding-bottom: 100%;
+            transform-origin: left bottom;
+            background: url("../images/item/floating-y.svg") no-repeat;
+            background-size: contain;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            transform: translate(0, calc(100% - 20vh));
+            animation: floating-y 3s linear infinite;
+        }
+    }
+    .part-right {
+        @include lg {
+            width: 48%;
+        }
+    }
+    .part-bottom {
+        width: 100%;
+        border: 4px solid $color-second;
+        padding: $pd-xs;
+        border-radius: $rd;
+        background-color: #fff;
+        height: clamp(150px, 28vh, 280px);
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+    textarea {
+        border: none;
+        background: none;
+        outline: none;
+        box-shadow: none;
+        -webkit-appearance: none;
+        appearance: none;
+        cursor: pointer;
+        border-radius: 0;
+        font-family: $font-read;
+        resize: none;
+        width: 100%;
+        font-size: 1em;
+        line-height: 1.5em;
+        height: 100%;
+        box-sizing: border-box;
+        @include lg {
+        }
+        @include xxxl {
+            font-size: 1.125em;
+        }
+    }
+}
+@keyframes floating-y {
+    0% {
+        transform: translate(0, calc(100% - 20vh));
+    }
+    50% {
+        transform: translate(0, calc(100% - 22vh));
+    }
+    100% {
+        transform: translate(0, calc(100% - 20vh));
+    }
+}
+
+.loading-holder {
+    height: calc(100vh - #{$header-xs});
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    @include xxl {
+        height: calc(100vh - #{$header-xxl});
+    }
+    .cooking {
+        width: clamp(360px, 46vw, 960px);
+        background: url("../images/item/cooking.webp") no-repeat center center;
+        background-size: contain;
+        &:before {
+            content: "";
+            display: block;
+            width: 100%;
+            padding-bottom: 50%;
+        }
+    }
+    .fz-B {
+        @include xs_md {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            line-height: 1.5em;
+        }
+    }
+    .dot-loading {
+        @include xs_md {
+            margin-top: 5px;
+            i {
+                background-color: $color-second;
+            }
+        }
+    }
+}
+
+.dot-loading {
+    display: inline-flex;
+    height: 1.125em;
+    align-items: center;
+    vertical-align: middle;
+    i {
+        display: block;
+        background-color: $color-black;
+        border-radius: 50%;
+        width: 6px;
+        height: 6px;
+        margin: 0 4px 2px;
+        flex-shrink: 0;
+        animation: dot-delay 1.8s $ease infinite;
+        @for $i from 1 through 8 {
+            &:nth-of-type(#{$i}) {
+                animation-delay: 0.1s * ($i - 1);
+            }
+        }
+    }
+}
+
+@keyframes dot-delay {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0);
+    }
+}
+
+.gnerate-finish {
+    .part-bottom {
+        padding-top: $pd-xs * 2;
+        padding-bottom: $pd-xs;
+    }
+    .btn-area {
+        @include xs_md {
+            flex-wrap: wrap;
+            .btn {
+                margin-bottom: 0;
+            }
+        }
+        .desc {
+            @include xs_md {
+                width: 100%;
+                text-align: center;
+                padding-bottom: 0.5em;
+            }
+            @include md {
+                padding-right: 1em;
+            }
+        }
+    }
+}
+
+.dialogue-1 {
+    position: absolute;
+    left: 10%;
+    top: 0;
+    transform: translate(-50%, 50%) rotate(-22deg);
+    animation: swing 1.5s step-end infinite;
+    @include lg_xl {
+        top: -5vh;
+    }
+    @include xl_xxl {
+        top: -3vh;
+    }
+    @include xxxl {
+        top: 4vh;
+    }
+}
+@keyframes swing {
+    0% {
+        transform: translate(-50%, 50%) rotate(-22deg);
+    }
+    50% {
+        transform: translate(-50%, 50%) rotate(-30deg);
+    }
+    100% {
+        transform: translate(-50%, 50%) rotate(-22deg);
+    }
+}
+.swing-slash-left {
+    margin-right: 0.2em;
+    display: inline-block;
+    transform-origin: center;
+    font-family: $font-en;
+    animation: swing-slash-left 1.25s step-end infinite;
+}
+.swing-slash-right {
+    margin-left: 0.2em;
+    transform-origin: center;
+    display: inline-block;
+    font-family: $font-en;
+    animation: swing-slash-right 1.25s step-end infinite;
+}
+@keyframes swing-slash-left {
+    0% {
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(-15deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}
+@keyframes swing-slash-right {
+    0% {
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(15deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}

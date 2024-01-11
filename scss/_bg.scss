@@ -1,0 +1,138 @@
+.bg-member {
+    background-color: #fff;
+    @include md {
+        background: #fff url("../images/bg/bg-member.webp") no-repeat;
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+    }
+    @include xs_lg {
+        background-attachment: fixed;
+    }
+}
+
+.bg-prd-list {
+}
+
+.bg-gnerate {
+    background-color: #fff9e9;
+    @include md {
+        background: #fff9e9 url("../images/bg/bg-gnerate.webp") no-repeat;
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+    }
+}
+.bg-loading {
+    background-color: #fff9e9;
+    @include md {
+        background: #fff9e9 url("../images/bg/bg-loading.webp") no-repeat center center;
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+    }
+}
+
+.bg-prepare {
+    background-color: #fff9e9;
+    @include md {
+        background: #fff9e9 url("../images/bg/bg-prepare.webp") no-repeat center top -74px;
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        min-height: 100vh;
+        // background-attachment: fixed;
+    }
+}
+
+.deco-item {
+    display: block;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    &:after {
+        content: "";
+        display: block;
+        width: 100%;
+    }
+    @include xs_lg {
+        display: none;
+    }
+}
+.deco-1 {
+    width: 20vw;
+    right: 0;
+    top: -162px;
+    background-image: url("../images/bg/bg-finish-top.webp");
+    background-position: right top;
+    &:after {
+        padding-bottom: 143%;
+    }
+}
+.deco-2 {
+    width: 20vw;
+    left: 0;
+    bottom: 0;
+    background-image: url("../images/bg/bg-finish-left.webp");
+    background-position: left bottom;
+    &:after {
+        padding-bottom: 216%;
+    }
+}
+.deco-3 {
+    width: 19vw;
+    right: 0;
+    bottom: 0;
+    background-image: url("../images/bg/bg-finish-right.svg");
+    background-position: right bottom;
+    &:after {
+        padding-bottom: 110%;
+    }
+}
+
+.deco-4 {
+    width: 31.9vw;
+    left: 0;
+    bottom: 0;
+    background-image: url("../images/bg/bg-gnerate-left.webp");
+    background-position: left bottom;
+    &:after {
+        padding-bottom: 154%;
+    }
+}
+.deco-5 {
+    width: 26.45vw;
+    right: 0;
+    bottom: 0;
+    background-image: url("../images/bg/bg-gnerate-right.webp");
+    background-position: right bottom;
+    &:after {
+        padding-bottom: 186.6%;
+    }
+}
+.deco-6 {
+    width: 30vw;
+    right: 0;
+    bottom: 0;
+    background-image: url("../images/bg/bg-list-bottom.webp");
+    background-position: right bottom;
+    &:after {
+        padding-bottom: 76%;
+    }
+}
+.deco-7 {
+    width: 18.96vw;
+    left: 0;
+    top: 250px;
+    background-image: url("../images/bg/bg-clt-left.webp");
+    background-position: left top;
+    &:after {
+        padding-bottom: 129%;
+    }
+}
+.deco-8 {
+    width: 36.38vw;
+    right: 0;
+    bottom: 0;
+    background-image: url("../images/bg/bg-clt-bottom.webp");
+    background-position: right bottom;
+    &:after {
+        padding-bottom: 75.38%;
+    }
+}

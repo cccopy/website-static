@@ -1,0 +1,147 @@
+.fz-A,
+.fz-B,
+.fz-C,
+.fz-D,
+.fz-E,
+.bold {
+    font-family: $font-title;
+    font-weight: 700;
+    line-height: 1.25em;
+}
+//40
+.fz-A {
+    font-size: 2em;
+    @include xxl {
+        font-size: 2.5em;
+    }
+    @include xxxl {
+        font-size: 2.75em;
+    }
+}
+//32
+.fz-B {
+    font-size: 1.75em;
+    @include xxl {
+        font-size: 2em;
+    }
+    @include xxxl {
+        font-size: 2.25em;
+    }
+}
+//24
+.fz-C {
+    font-size: 1.5em;
+    @include xxl {
+        font-size: 1.5em;
+    }
+    @include xxxl {
+        font-size: 1.75em;
+    }
+}
+//22
+.fz-D {
+    font-size: 1.25em;
+    @include xxl {
+        font-size: 1.375em;
+    }
+    @include xxxl {
+        font-size: 1.5em;
+    }
+}
+//18
+.fz-E {
+    font-size: 1.125em;
+
+    @include xxxl {
+        font-size: 1.25em;
+    }
+}
+.bold {
+    font-weight: 700;
+}
+.fw-light {
+    font-weight: normal;
+}
+.fw-normal {
+    font-weight: normal;
+}
+.bold {
+    font-weight: 700;
+}
+.text-center {
+    text-align: center;
+    width: 100%;
+}
+.fz-small {
+    font-size: 0.875em;
+    .icon {
+        &:before {
+            width: 18px;
+            height: 18px;
+        }
+    }
+}
+.fc-gray {
+    color: #666;
+    .icon {
+        &:before {
+            background-color: #666;
+        }
+    }
+}
+.fc-brown {
+    color: $color-second-dark;
+}
+.fc-lightblue {
+    color: $color-lightblue;
+}
+.fc-black {
+    color: $color-black;
+}
+.fc-blue {
+    color: $color-main;
+}
+.fc-orange {
+    color: $color-second;
+}
+.fz-xs {
+    font-size: 0.75em;
+}
+.fc-alert {
+    color: $color-alert;
+}
+.fc-green {
+    color: $color-green;
+}
+.ff-en {
+    font-family: $font-en;
+}
+.all-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.text-right {
+    text-align: right;
+}
+// .flex-right {
+//     justify-content: flex-end;
+//     display: flex;
+// }
+// .fc-main {
+//     color: $color-main;
+// }
+
+// .fz-small {
+//     font-size: 0.875em;
+// }
+
+// .elips-1 {
+//     overflow: hidden;
+//     text-overflow: ellipsis;
+//     -webkit-line-clamp: 1;
+//     display: -webkit-box;
+//     height: 1.375em;
+//     line-height: 1.375em;
+//     -webkit-box-orient: vertical;
+// }

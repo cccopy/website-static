@@ -1,0 +1,79 @@
+.edit {
+    p {
+        padding-bottom: 1em;
+        padding-top: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    h1,
+    h2,
+    h3 {
+        //color: $color-deco;
+        padding-bottom: 0.5em;
+    }
+    h3,
+    h4,
+    h5 {
+        //color: $color-deco;
+        font-size: 1em;
+        padding-bottom: 0.5em;
+    }
+    // .fz-C {
+    //     font-size: 1em;
+    //     padding-bottom: 0.5em;
+    //     @include xxxl {
+    //         font-size: 1.125em;
+    //     }
+    // }
+
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: $rd;
+        overflow: hidden;
+        margin: 0.5em auto 1.5em;
+    }
+    hr {
+        border: none;
+        background: none;
+        outline: none;
+        box-shadow: none;
+        -webkit-appearance: none;
+        appearance: none;
+        cursor: pointer;
+        border-radius: 0;
+        border-top: 1px solid $color-border;
+        margin: $gap 0 $gap * 1.5;
+    }
+    ul {
+        padding: 0 0 $gap 0;
+        li {
+            position: relative;
+            padding: 5px 0 5px 25px;
+            font-family: $font-read;
+
+            &:before {
+                content: "";
+                display: block;
+                width: 8px;
+                height: 8px;
+                background-color: $color-deco;
+                border-radius: 50%;
+                position: absolute;
+                left: 0;
+                top: 0.95em;
+            }
+        }
+    }
+    ol {
+        margin-top: 1em;
+    }
+    strong {
+        font-weight: bold;
+    }
+    a {
+        color: $color-deco;
+        font-weight: bold;
+    }
+}

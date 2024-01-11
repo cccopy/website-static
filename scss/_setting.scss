@@ -1,0 +1,142 @@
+// RWD ============================================
+$gap: 12px;
+
+//---------
+$pd-xs: 20px;
+$pd-sm: 60px;
+$pd-md: 100px;
+$pd-lg: 50px;
+$pd-xl: $pd-lg;
+$pd-xxl: 79px;
+$pd-xxxl: 90px;
+//---------container-s
+$pd-outside-lg: 4.58vw;
+$pd-inside-xs: 38px;
+$pd-inside-sm: 70px;
+$pd-inside-md: 100px;
+$pd-inside-lg: 10vw;
+$pd-inside-xl: 12vw;
+$pd-inside-xxxl: 16.4vw;
+// HEADER ============================================
+$header-xs: 60px;
+$header-md: 60px;
+$header-lg: 60px;
+$header-xl: 60px;
+$header-xxl: 74px;
+//PADDINT-TOP ============================================
+$pdt-xs: 100px;
+$pdt-md: 150px;
+//FROM ============================================
+$form-height: 40px;
+$form-border-color: #b8bbc2;
+$form-gap: 10px;
+// $formh-xs: 32px;
+// $formh-lg: 32px;
+// $formh-xxxl: 36px;
+
+// RWD ============================================
+$xs: 0;
+$sm: 576px;
+$md: 740px;
+$lg: 980px;
+$xl: 1100px; //laptop 要照顧 1280 / 1366 / 1440 // pad pro
+$xxl: 1380px; //大螢幕 要照顧 1680 / 1920
+$xxxl: 1700px;
+$super: 2200px;
+$fullhd: 1800px;
+//MAX-WIDHT ============================================
+$mxw-sm: 100%;
+$mxw-md: 100%;
+$mxw-lg: 100%;
+$mxw-xl: 100%;
+$mxw-xxl: 100%;
+$mxw-xxxl: 100%;
+$mxw-super: $mxw-xxxl;
+//sass-mq ============================================
+$mq-responsive: true;
+$mq-breakpoints: (
+    "xs": $xs,
+    "sm": $sm,
+    "md": $md,
+    "lg": $lg,
+    "xl": $xl,
+    "xxl": $xxl,
+    "xxxl": $xxxl,
+    "super": $super,
+);
+$puredriller-breakpoints: (
+    xs: $xs,
+    sm: $sm,
+    md: $md,
+    lg: $lg,
+    xl: $xl,
+    xxl: $xxl,
+    xxxl: $xxxl,
+    super: $super,
+) !default;
+// $puredriller-max-widths: ( sm: 540px, md: 720px, lg: 960px, xl: 1140px, xxl: 1200px, xxxl: 1500px, super: 1920px) !default;
+$puredriller-max-widths: (
+    sm: $mxw-sm,
+    md: $mxw-md,
+    lg: $mxw-lg,
+    xl: $mxw-xl,
+    xxl: $mxw-xxl,
+    xxxl: $mxw-xxxl,
+    super: $mxw-super,
+) !default;
+$font-read: "Noto Sans TC", "PingFang", "PingFangTC", "Microsoft JhengHei", Helvetica, Arial;
+$font-en: "Nunito Sans", sans-serif;
+$font-title: "Noto Sans TC", sans-serif;
+// color
+$color-main: #224ce7;
+$color-main-dark: #00228a;
+$color-main-light: #dde1ff;
+$color-second: #f5a218;
+$color-second-dark: #462a00;
+$color-second-light: #ffebd3;
+$color-alert: #ae1914;
+$color-green: #00ae1c;
+$color-lightblue: #37b5fe;
+$color-deco: #cdbb18;
+$color-light: #f8f2bc;
+$color-black: #212121;
+$color-gray: #e9e9e9;
+$color-white: #f7f8e4;
+$color-disabled: #777;
+$color-lab: rgba(15, 67, 90, 0.7);
+$color-border: #e6e6e6; //#adacab; //rgb(214, 214, 214); //rgba(187, 188, 188, 0.5);
+$color-border-light: rgba(#fff, 0.15);
+$color-border-banner: rgba(#fff, 0.3);
+$color-bg: #fff;
+$color-read: #777;
+$color-text-light: #7c8b9f;
+$color-text-dark: #000; //526680
+
+$black30: #e0e0e0;
+$rd: 16px;
+$rd-form: 4px;
+$shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+$shadow-deco: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+// Transitions
+// =============================================================================
+$speed: 0.3s;
+$bounce: cubic-bezier(0.17, 0.67, 0.3, 1.33);
+$Power1EaseOut: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+$Power2EaseOut: cubic-bezier(0.215, 0.61, 0.355, 1);
+$Power3EaseOut: cubic-bezier(0.165, 0.84, 0.44, 1);
+$Power4EaseOut: cubic-bezier(0.23, 1, 0.32, 1);
+$Power1EaseIn: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+$Power2EaseIn: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+$Power3EaseIn: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+$Power4EaseIn: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+$ExpoEaseOut: cubic-bezier(0.19, 1, 0.22, 1);
+$ExpoEaseIn: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+$ExpoEaseInOut: cubic-bezier(1, 0, 0, 1);
+$SineEaseOut: cubic-bezier(0.39, 0.575, 0.565, 1);
+$SineEaseIn: cubic-bezier(0.47, 0, 0.745, 0.715);
+$Power1EaseInOut: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+$Power2EaseInOut: cubic-bezier(0.645, 0.045, 0.355, 1);
+$Power3EaseInOut: cubic-bezier(0.77, 0, 0.175, 1);
+$Power4EaseInOut: cubic-bezier(0.86, 0, 0.07, 1);
+$SlowEaseOut: cubic-bezier(0.04, 1.15, 0.4, 0.99);
+$ease: $Power2EaseOut;
