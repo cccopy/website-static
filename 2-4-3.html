@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+    <head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>CVO</title>
+<meta name="description" content="CVO敘述">
+<meta property="og:image" content="./images/cvo-banner.png">
+<meta property="og:image:alt" content="CVO敘述">
+<meta property="og:image:type" content="image/jpg">
+<meta property="og:title" content="CVO敘述">
+<meta property="og:description" content="CVO敘述">
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="icon" href="./images/favicon.png">
+
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+        <style>
+            :root {
+                --select-color-1: #88d1e0;
+                --select-color-2: #0de2db;
+                --select-color-3: #0de599;
+            }
+        </style>
+    </head>
+    <body>
+
+<header class="header">
+    <a href="index.html" class="logo" title="CVO">CVO</a>
+    <div class="fn">
+        <a href="#">預約諮詢</a>
+        <a href="#">價格</a>
+        <a href="#">登入 / 註冊</a>
+    </div>
+    <a class="nav-toggle" href="#" id="nav-toggle">
+        <div class="hamburger">
+            <span class="line line-1"></span>
+            <span class="line line-2"></span>
+            <span class="line line-3"></span>
+        </div>
+    </a>
+</header>
+
+
+
+<nav class="nav">
+    <div class="main-nav"></div>
+</nav>
+
+
+        <div class="page">
+            <section class="gt-body bg-prepare-3">
+                <div class="container recipe">
+                    <div class="left">
+                        <h2 class="fz-B fc-brown text-center title-holder">
+                            今天這支影音需要 <br>
+                            您提供以下食材喔！
+                        </h2>
+                        <div class="chief-holder">
+                            <i class="chief flexible chief-6"></i>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="recipe-item-container">
+                            <div class="recipe-item">
+                                <div class="arrow-box arrow-left">
+                                    <strong class="fz-B smaller fc-orange"> 7個資訊重點+說明</strong>
+                                </div>
+                                <ul class="order-input">
+                                    <li>
+                                        <input type="text">
+                                    </li>
+                                    <li>
+                                        <input type="text">
+                                    </li>
+                                    <li>
+                                        <input type="text">
+                                    </li>
+                                    <li>
+                                        <input type="text">
+                                    </li>
+                                    <li>
+                                        <input type="text">
+                                    </li>
+                                    <li>
+                                        <input type="text">
+                                    </li>
+                                    <li>
+                                        <input type="text">
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="recipe-item">
+                                <div class="arrow-box arrow-left">
+                                    <strong class="fz-B smaller fc-orange">最新品牌Logo + slogan</strong>
+                                </div>
+                                <div class="form-item">
+                                    <div class="field">品牌Logo</div>
+                                    <div class="value">
+                                        <div class="fake-upload">
+                                            <input type="file" id="uploadfile">
+                                            <label for="uploadfile">
+                                                <div class="btn btn-large">
+                                                    <i class="icon icon-45"></i>
+                                                    <span>檔案上傳</span>
+                                                </div>
+                                            </label>
+                                            <div class="remarker">
+                                                <i class="icon icon-41 small gray"></i>
+                                                <p class="fc-gray fz-xs">尚未選擇檔案</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-item">
+                                    <div class="field">品牌slogan</div>
+                                    <div class="value">
+                                        <input type="text">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="recipe-item">
+                                <div class="arrow-box arrow-left">
+                                    <strong class="fz-B smaller fc-orange">影片主題3色系</strong>
+                                </div>
+                                <div class="form-item">
+                                    <div class="field">色碼選擇</div>
+                                    <div class="value">
+                                        <div class="item" data-color>
+                                            <input type="color" id="color-1">
+                                            <div class="custom">
+                                                <i class="icon icon-43 white"></i>
+                                            </div>
+                                        </div>
+                                        <div class="item" data-color>
+                                            <input type="color" id="color-2">
+                                            <div class="custom">
+                                                <i class="icon icon-43 white"></i>
+                                            </div>
+                                        </div>
+                                        <div class="item" data-color>
+                                            <input type="color" id="color-3">
+                                            <div class="custom">
+                                                <i class="icon icon-43 white"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="recipe-item">
+                                <div class="arrow-box arrow-left">
+                                    <strong class="fz-B smaller fc-orange">配音期待影片/音檔</strong>
+                                </div>
+                                <div class="form-item">
+                                    <div class="field">上傳配音範例</div>
+                                    <div class="value">
+                                        <div class="fake-upload">
+                                            <input type="file" id="uploadfile">
+                                            <label for="uploadfile">
+                                                <div class="btn btn-large">
+                                                    <i class="icon icon-45"></i>
+                                                    <span>檔案上傳</span>
+                                                </div>
+                                            </label>
+                                            <div class="remarker">
+                                                <i class="icon icon-41 small gray"></i>
+                                                <p class="fc-gray fz-xs">尚未選擇檔案</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-item">
+                                    <div class="field">配音敘述</div>
+                                    <div class="value">
+                                        <input type="text" placeholder="EX.溫柔高音女聲">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="recipe-item no-after">
+                                <div class="arrow-box arrow-left">
+                                    <strong class="fz-B smaller fc-orange">繪畫風格範例圖</strong>
+                                </div>
+                                <div class="form-item">
+                                    <div class="field">上傳風格範例</div>
+                                    <div class="value">
+                                        <div class="fake-upload">
+                                            <input type="file" id="uploadfile">
+                                            <label for="uploadfile">
+                                                <div class="btn btn-large">
+                                                    <i class="icon icon-45"></i>
+                                                    <span>檔案上傳</span>
+                                                </div>
+                                            </label>
+                                            <div class="remarker">
+                                                <i class="icon icon-41 small gray"></i>
+                                                <p class="fc-gray fz-xs">尚未選擇檔案</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-item">
+                                    <div class="field">風格敘述</div>
+                                    <div class="value">
+                                        <input type="text" placeholder="EX.卡通美漫畫感">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="recipe-item btn-area">
+                                <a class="btn border btn-large" href="2-4-3.html">
+                                    <i class="icon icon-46"></i>
+                                    <span>暫存</span>
+                                </a>
+                                <a class="btn blue btn-large" href="2-5.html">
+                                    <i class="icon icon-44"></i>
+                                    <span>下一步</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+<footer class="footer">
+    <div class="container">
+        <div class="ft-info">
+            <div class="logo for-footer"></div>
+            <ul class="ft-contact">
+                <li>
+                    <h5 class="fz-D">C.V.O 影音長</h5>
+                </li>
+                <li>02-2752-9069</li>
+                <li>台北市松山區復興北路181號12樓之2</li>
+                <li class="social">
+                    <h5 class="bold fc-lightblue">追蹤我們</h5>
+                    <a href="">
+                        <i class="icon icon-15 white"></i>
+                    </a>
+                    <a href="">
+                        <i class="icon icon-16 white"></i>
+                    </a>
+                    <a href="">
+                        <i class="icon icon-17 white"></i>
+                    </a>
+                    <a href="">
+                        <i class="icon icon-18 white"></i>
+                    </a>
+                    <a href="">
+                        <i class="icon icon-19 white"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="ft-links">
+            <div>
+                <h6 class="bold fc-lightblue">關於我們</h6>
+                <a href="" class="fz-small">about us</a>
+                <a href="" class="fz-small">預約諮詢</a>
+                <a href="" class="fz-small">異業合作</a>
+                <a href="" class="fz-small">客服信箱</a>
+                <a href="" class="fz-small">加入我們</a>
+            </div>
+            <div>
+                <h6 class="bold fc-lightblue">網站服務</h6>
+                <a href="" class="fz-small">會員分級</a>
+                <a href="" class="fz-small">服務流程</a>
+                <a href="" class="fz-small">常見問題</a>
+                <a href="" class="fz-small">服務條款</a>
+                <a href="" class="fz-small">隱私權政策</a>
+            </div>
+        </div>
+        <div class="copyright"><strong>C.V.O 影音長</strong> © All Rights Reserved.</div>
+    </div>
+    <div class="deco-line">
+        <i class="yellow"></i>
+        <i class="lightblue"></i>
+    </div>
+</footer>
+
+
+
+
+<script>
+    //密碼判斷是否出現眼睛
+    const body = document.querySelector("body");
+    const togglePassword = document.querySelectorAll("[data-togglePassword]");
+    togglePassword.forEach((element) => {
+        const input = element.querySelector("input");
+        const eye = element.querySelector(".eye");
+        eye.addEventListener("click", function (e) {
+            eye.classList.toggle("--show");
+            if (input.type === "password") {
+                input.type = "text";
+            } else {
+                input.type = "password";
+            }
+        });
+    });
+
+    body.addEventListener("keyup", function (e) {
+        var target = e.target;
+        var type = target.type;
+        var parent = target.parentNode;
+
+        if (type == "password") {
+            if (target.value != "") {
+                // console.log('有值');
+                parent.classList.add("show-eye");
+            } else {
+                //console.log('空值');
+                parent.classList.remove("show-eye");
+            }
+        } else {
+        }
+    });
+
+    /*操作 modal*/
+    let currentLevel = 0;
+    const modals = document.querySelectorAll("[data-modal]");
+    const modalBtns = document.querySelectorAll("[data-openmodal]");
+    modalBtns.forEach((element) => {
+        element.addEventListener("click", function (e) {
+            var id = element.dataset.openmodal;
+            var target = document.querySelector("#" + id);
+            // currentLevel = currentLevel + 1;
+            // var layerClass = "layer-" + currentLevel;
+            // var showLayerClass = "has-layer-" + currentLevel;
+            // currentModal = target;
+            // console.log('you click ' + id);
+            // console.log(target);
+            // console.log(currentModal);
+            target.classList.add("--active");
+            // target.classList.add(layerClass);
+            body.classList.add("has-modal");
+            e.preventDefault();
+
+            //           element.classList.remove('active');
+            if ("autoclose" in element.dataset) {
+                console.log("有的");
+                setTimeout(() => {
+                    target.classList.remove("active");
+                    body.classList.remove("has-modal");
+                }, 1500);
+            } else {
+            }
+        });
+    });
+
+    modals.forEach((element) => {
+        var modalBody = element.querySelector(".modal-container");
+        var modalClose = element.querySelectorAll("[data-close]");
+        var modalsBack = element.querySelector("[data-back]");
+
+        modalClose.forEach((close) => {
+            close.addEventListener("click", function () {
+                element.classList.remove("--active");
+                body.classList.remove("has-modal");
+            });
+        });
+    });
+
+    if (document.querySelector(".video-container")) {
+        // 獲取影片和播放按鈕元素
+        const videos = document.querySelectorAll(".video-container");
+
+        videos.forEach((element) => {
+            let video = element.querySelector("video");
+            let btnPlay = element.querySelector("[data-playvideo]");
+            video.pause();
+            //let container = document.querySelector(".video-container");
+            // 點擊播放按鈕後，影片開始播放並在 video-container 加上 --active 類別
+            btnPlay.addEventListener("click", function () {
+                if (video.paused) {
+                    video.play();
+                    element.classList.add("--active");
+                } else {
+                    video.pause();
+                    element.classList.remove("--active");
+                }
+            });
+
+            // 若影片播放時點擊暫停，則在 video-container 移除 --active 類別
+            video.addEventListener("pause", function () {
+                element.classList.remove("--active");
+            });
+        });
+    }
+</script>
+
+
+        <script>
+            const color = document.querySelectorAll("[data-color]");
+            color.forEach((element) => {
+                const input = element.querySelector("input");
+                const custom = element.querySelector(".custom");
+                input.addEventListener("change", function () {
+                    custom.style.setProperty("background-color", input.value);
+                });
+            });
+        </script>
+    </body>
+</html>

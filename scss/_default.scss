@@ -118,7 +118,10 @@ a {
     overflow: hidden;
     position: relative;
     width: 100%;
-    border-radius: 8px;
+    border: 4px solid $color-second;
+    box-shadow: $shadow-deco;
+    border-radius: $rd;
+    overflow: hidden;
     &::after {
         padding-top: 56.25%;
         display: block;
@@ -138,6 +141,25 @@ a {
         left: 0;
         width: 100%;
         height: auto;
+    }
+    .cover-mask {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 9;
+        left: 0;
+        top: 0;
+        background-color: rgba(#000, 0.4);
+        transition: opacity 0.5s $ease;
+    }
+    &.border-white {
+        border-color: #fff;
+    }
+    &.--active {
+        .cover-mask {
+            opacity: 0;
+            pointer-events: none;
+        }
     }
 }
 

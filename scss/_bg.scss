@@ -14,38 +14,80 @@
 }
 
 .bg-gnerate {
-    background-color: #fff9e9;
+    background-color: $color-bg-yellow;
     @include md {
-        background: #fff9e9 url("../images/bg/bg-gnerate.webp") no-repeat;
+        background: $color-bg-yellow url("../images/bg/bg-gnerate.webp") no-repeat;
         background-size: 100% auto;
         background-repeat: no-repeat;
     }
 }
 .bg-loading {
-    background-color: #fff9e9;
+    background-color: $color-bg-yellow;
     @include md {
-        background: #fff9e9 url("../images/bg/bg-loading.webp") no-repeat center center;
+        background: $color-bg-yellow url("../images/bg/bg-loading.webp") no-repeat center center;
         background-size: 100% auto;
         background-repeat: no-repeat;
     }
 }
 
-.bg-prepare {
-    background-color: #fff9e9;
+.bg-prepare-1 {
+    background-color: $color-bg-yellow;
     @include md {
-        background: #fff9e9 url("../images/bg/bg-prepare.webp") no-repeat center top -74px;
+        background: $color-bg-yellow url("../images/bg/bg-prepare.webp") no-repeat center top -74px;
         background-size: 100% auto;
         background-repeat: no-repeat;
-        min-height: 100vh;
+        min-height: calc(100dvh - #{$header-xs});
         // background-attachment: fixed;
     }
 }
 
+.bg-prepare-2 {
+    background-color: $color-bg-yellow;
+    background: $color-bg-yellow url("../images/bg/bg-2-4-2.webp") no-repeat center top;
+    background-repeat: no-repeat;
+    min-height: calc(100dvh - #{$header-xs});
+    background-size: cover;
+
+    @include xl {
+        background-position: center top -12vh;
+    }
+}
+
+.bg-prepare-3 {
+    background-color: $color-bg-yellow;
+    @include md {
+        background: $color-bg-yellow url("../images/bg/bg-2-4-3.webp") no-repeat center top;
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        min-height: calc(100dvh - #{$header-xs});
+    }
+}
+
+.bg-upload-finish {
+    background-color: $color-bg-yellow;
+    @include md {
+        background: $color-bg-yellow url("../images/bg/bg-upload-finish.webp") no-repeat center top;
+        background-size: cover;
+        background-repeat: no-repeat;
+        min-height: calc(100dvh - #{$header-xs});
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    @include xxl {
+        background-position: center top -8vh;
+    }
+    .recipe {
+        align-items: center;
+        margin-top: -8vh;
+    }
+}
 .deco-item {
     display: block;
     position: absolute;
     background-repeat: no-repeat;
     background-size: contain;
+    pointer-events: none;
     &:after {
         content: "";
         display: block;
@@ -134,5 +176,16 @@
     background-position: right bottom;
     &:after {
         padding-bottom: 75.38%;
+    }
+}
+.deco-9 {
+    width: 14vw;
+    right: 0;
+    top: 0;
+    background-image: url("../images/item/prd-detail.svg");
+    background-position: right bottom;
+    z-index: 2;
+    &:after {
+        padding-bottom: 160%;
     }
 }

@@ -1,0 +1,85 @@
+$cheifCount: 50; //必填，chief長度數量
+//適用於before
+%ICON {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    // background-image: url("../images/chief.svg");
+    // background-size: auto 100%;
+    -webkit-mask-image: url("../images/chief.svg");
+    -webkit-mask-size: contain;
+    //-webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+}
+
+@mixin chief($index) {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url("../images/chief.svg");
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    $chiefPosX: percentage((100 / ($cheifCount - 1)) * ($index - 1) / 100);
+    background-position: round($chiefPosX * 100) / 100 0;
+}
+
+@mixin chiefPos($index) {
+    background-size: auto 100%;
+    $chiefPosX: percentage((100 / ($cheifCount - 1)) * ($index - 1) / 100);
+    background-position: round($chiefPosX * 100) / 100 0;
+}
+
+@for $i from 1 through $cheifCount {
+    .chief-#{$i} {
+        $chiefPosX: percentage((100 / ($cheifCount - 1)) * ($i - 1) / 100);
+        &:before {
+            background-position: round($chiefPosX * 100) / 100 0;
+        }
+    }
+}
+
+.chief {
+    font-size: 0;
+    display: block;
+    &:before {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        //  background-image: url("../images/chief.svg");
+        background-image: url("../images/chief.svg");
+        background-size: auto 100%;
+        // background-position: center;
+        background-repeat: no-repeat;
+        //  background-size: auto 100%;
+        transition: transform 0.3s $ease;
+        width: clamp(100px, 12.5vw, 300px);
+        height: clamp(100px, 12.5vw, 300px);
+    }
+    &.flexible {
+        width: 100%;
+        &:before {
+            width: initial;
+            height: initial;
+            width: 100%;
+            padding-bottom: 100%;
+        }
+    }
+    &.small {
+        &:before {
+            width: 16px;
+            height: 16px;
+        }
+    }
+    &.middle {
+        &:before {
+            width: 30px;
+            height: 30px;
+        }
+    }
+    &.super {
+        &:before {
+            width: 60px;
+            height: 60px;
+        }
+    }
+}

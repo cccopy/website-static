@@ -14,7 +14,7 @@
 <meta property="og:description" content="CVO敘述">
 
 <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300;6..12,500;6..12,700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
 <link rel="icon" href="./images/favicon.png">
 
 <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -909,6 +909,33 @@
             });
         });
     });
+
+    if (document.querySelector(".video-container")) {
+        // 獲取影片和播放按鈕元素
+        const videos = document.querySelectorAll(".video-container");
+
+        videos.forEach((element) => {
+            let video = element.querySelector("video");
+            let btnPlay = element.querySelector("[data-playvideo]");
+            video.pause();
+            //let container = document.querySelector(".video-container");
+            // 點擊播放按鈕後，影片開始播放並在 video-container 加上 --active 類別
+            btnPlay.addEventListener("click", function () {
+                if (video.paused) {
+                    video.play();
+                    element.classList.add("--active");
+                } else {
+                    video.pause();
+                    element.classList.remove("--active");
+                }
+            });
+
+            // 若影片播放時點擊暫停，則在 video-container 移除 --active 類別
+            video.addEventListener("pause", function () {
+                element.classList.remove("--active");
+            });
+        });
+    }
 </script>
 
 

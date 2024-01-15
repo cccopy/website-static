@@ -41,6 +41,8 @@ $iconsetCount: 80; //必填，iconset長度數量
 .icon {
     font-size: 0;
     display: inline-block;
+    transition: all 0.3s $ease;
+    transition-property: opacity, transform;
     &:before {
         content: "";
         display: inline-block;
@@ -52,9 +54,16 @@ $iconsetCount: 80; //必填，iconset長度數量
         -webkit-mask-repeat: no-repeat;
         background-color: #000;
         //  background-size: auto 100%;
-        transition: background-color 0.3s $ease;
+        transition: all 0.3s $ease;
+        transition-property: background-color, color, opacity;
         width: 24px;
         height: 24px;
+    }
+    &.small {
+        &:before {
+            width: 16px;
+            height: 16px;
+        }
     }
     &.middle {
         &:before {
@@ -95,7 +104,7 @@ $iconsetCount: 80; //必填，iconset長度數量
     }
     &.gray {
         &:before {
-            background-color: $color-text-light;
+            background-color: #666;
         }
     }
 }

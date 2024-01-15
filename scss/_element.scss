@@ -42,6 +42,40 @@
     margin: 0 3px 3px 0;
     transition: all 0.35s $ease;
     transition-property: background-color, color;
+    &.tag-large {
+        line-height: 32px;
+        font-size: 0.75em;
+        @include xxxl {
+            font-size: 0.8125em;
+        }
+    }
+    &.border {
+        border: 1px solid #757575;
+        color: #212121;
+        background-color: #fff;
+        &:hover {
+            border: 1px solid $color-main;
+            color: $color-main;
+            background-color: #fff;
+        }
+        &:active {
+            border: 1px solid $color-main;
+            color: $color-main;
+            background-color: $color-main-light;
+        }
+    }
+    &.orange {
+        background-color: $color-second-light;
+        color: #424242;
+        &:hover {
+            color: #fff;
+            background-color: $color-second;
+        }
+        &:active {
+            color: #fff;
+            background-color: $color-second-dark;
+        }
+    }
     @include xs_lg {
         min-height: 20px;
     }
@@ -154,6 +188,31 @@
     }
 }
 
+.flex-end {
+    align-items: flex-end;
+}
+
+.time {
+    display: flex;
+    align-items: flex-end;
+    .fz-A {
+        line-height: 0.9em;
+        letter-spacing: 1px;
+        & + p {
+            margin-left: 5px;
+        }
+    }
+    p {
+        line-height: 1.6em;
+        & + .fz-A {
+            margin-left: 5px;
+        }
+    }
+}
+.remark {
+    display: flex;
+    align-items: flex-start;
+}
 .map-ul {
     list-style: none;
     padding: 0;
@@ -166,12 +225,31 @@
         display: flex;
         list-style: none;
         align-items: flex-end;
+        align-items: center;
+        padding-bottom: $form-gap;
+        @include xxl {
+            padding-bottom: $form-gap * 1.5;
+        }
     }
     .value {
         display: flex;
     }
+    .icon {
+        margin-right: 3px;
+    }
     .field {
         font-size: 0.875em;
+        min-width: 92px;
+        display: flex;
+        align-items: center;
+        @include xxl {
+            min-width: 100px;
+        }
+    }
+    .remark {
+        display: flex;
+        align-items: center;
+        margin-left: 2em;
     }
 }
 .cooking-list {
@@ -349,12 +427,18 @@
     position: relative;
     background: #fff;
     border: 4px solid $color-second-dark;
-    padding: 0.75em 1.75em;
+    padding: 0.5em 1em;
     display: flex;
     width: max-content;
     align-items: center;
     border-radius: 40px;
     transform-origin: center;
+    @include sm {
+        margin: 0 1em;
+    }
+    @include xl {
+        padding: 0.75em 1.75em;
+    }
     &:after,
     &:before {
         top: 100%;
@@ -378,5 +462,123 @@
         border-top-color: $color-second-dark;
         border-width: 20px;
         margin-left: -20px;
+    }
+    &.arrow-left {
+        &:after,
+        &:before {
+            left: initial;
+            right: 100%;
+            top: 50%;
+            margin-right: -4px;
+            @include xl {
+                margin-right: -3px;
+            }
+        }
+        &:after {
+            border-color: transparent;
+            border-right-color: #fff;
+            border-width: 14px;
+            margin-top: -14px;
+        }
+        &:before {
+            border-color: transparent;
+            border-right-color: $color-second-dark;
+            border-width: 20px;
+            margin-top: -20px;
+        }
+    }
+    &.arrow-right {
+        &:after,
+        &:before {
+            left: 100%;
+            top: 50%;
+            margin-left: -4px;
+            @include xl {
+                margin-left: -3px;
+            }
+        }
+        &:after {
+            border-color: rgba(136, 183, 213, 0);
+            border-left-color: #fff;
+            border-width: 14px;
+            margin-top: -14px;
+        }
+        &:before {
+            border-color: rgba(194, 225, 245, 0);
+            border-left-color: $color-second-dark;
+            border-width: 20px;
+            margin-top: -20px;
+        }
+    }
+}
+.title-compact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include xs_sm {
+        flex-direction: column;
+    }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    width: 36px;
+    height: 36px;
+    box-shadow: $shadow;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 0;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    transition: all 0.35s $ease;
+    transition-property: background-color, border-color;
+    border: 2px solid $color-border;
+
+    @include xxxl {
+        width: 42px;
+        height: 42px;
+    }
+    .icon {
+        &:before {
+            background-color: $color-second;
+            width: 16px;
+            height: 16px;
+        }
+    }
+    &:after {
+        display: none;
+    }
+    &.swiper-button-disabled {
+        opacity: 1;
+        .icon {
+            &:before {
+                background-color: $color-border;
+            }
+        }
+    }
+    @media (hover: hover) {
+        &:hover {
+            background-color: $color-second;
+            border-color: $color-second;
+            .icon {
+                &:before {
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+}
+.ctrl-holder {
+    display: flex;
+    // border: 1px solid salmon;
+    width: max-content;
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        position: static;
+    }
+    .swiper-button-next {
+        margin-left: 10px;
     }
 }

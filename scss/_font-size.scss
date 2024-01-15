@@ -18,7 +18,7 @@
         font-size: 2.75em;
     }
 }
-//32
+//32-28
 .fz-B {
     font-size: 1.75em;
     @include xxl {
@@ -26,6 +26,15 @@
     }
     @include xxxl {
         font-size: 2.25em;
+    }
+    &.smaller {
+        font-size: 1.5em;
+        @include xxl {
+            font-size: 1.75em;
+        }
+        @include xxxl {
+            font-size: 2em;
+        }
     }
 }
 //24
@@ -59,6 +68,10 @@
 .bold {
     font-weight: 700;
 }
+.extra-bold {
+    font-weight: 800;
+}
+
 .fw-light {
     font-weight: normal;
 }

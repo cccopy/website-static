@@ -85,7 +85,7 @@ $puredriller-max-widths: (
     super: $mxw-super,
 ) !default;
 $font-read: "Noto Sans TC", "PingFang", "PingFangTC", "Microsoft JhengHei", Helvetica, Arial;
-$font-en: "Nunito Sans", sans-serif;
+$font-en: "Montserrat", sans-serif;
 $font-title: "Noto Sans TC", sans-serif;
 // color
 $color-main: #224ce7;
@@ -95,6 +95,7 @@ $color-second: #f5a218;
 $color-second-dark: #462a00;
 $color-second-light: #ffebd3;
 $color-alert: #ae1914;
+$color-bg-yellow: #fff9e9;
 $color-green: #00ae1c;
 $color-lightblue: #37b5fe;
 $color-deco: #cdbb18;
