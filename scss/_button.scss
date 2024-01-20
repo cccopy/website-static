@@ -34,7 +34,7 @@
         transition: color 0.3s $ease;
     }
     .icon {
-        margin-right: 3px;
+        margin-right: 5px;
         &:before {
             background-color: #fff;
             width: 20px;
@@ -223,8 +223,27 @@
         & + .text {
             margin-left: $pd-xs;
         }
+        &.blue {
+            color: $color-main;
+            .icon {
+                &:before {
+                    background-color: $color-main;
+                }
+            }
+            @media (hover: hover) {
+                &:hover {
+                    color: $color-main-dark;
+                    .icon {
+                        &:before {
+                            background-color: $color-main-dark;
+                        }
+                    }
+                }
+            }
+        }
         @media (hover: hover) {
             &:hover {
+                background-color: transparent !important;
                 box-shadow: none;
             }
         }
