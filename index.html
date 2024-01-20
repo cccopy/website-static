@@ -99,14 +99,41 @@
                         <video src="https://media.istockphoto.com/id/1474000584/video/abstract-seamless-loop-animation-background-with-a-colorful-geometric-pattern-is-a-great.mp4?s=mp4-640x640-is&k=20&c=_mviO46PCXEQneiflHHkT40Ssa8V72qQwjPeXq2-EG8=" controls="" controlslist="nodownload" autoplay="" loop=""></video>
                     </div>
                 </div>
+                <i class="deco-item deco-11"></i>
+                <i class="deco-item deco-12"></i>
             </section>
-            <section class="idx-features">
+            <section class="idx-features" data-features>
                 <div class="container">
                     <div class="slide-holder">
-                        <div class="img"></div>
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <div class="img" style="background-image: url('./images/item/feature-1.png')"></div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <div class="img" style="background-image: url('./images/item/feature-2.png')"></div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <div class="img" style="background-image: url('./images/item/feature-3.png')"></div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="item">
+                                        <div class="img" style="background-image: url('./images/item/feature-4.png')"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                        </div>
                     </div>
                     <div class="card-holder">
-                        <div class="item --active">
+                        <div class="item --active" data-trigger>
                             <div class="icon-holder">
                                 <i class="icon icon-53"></i>
                             </div>
@@ -115,7 +142,7 @@
                                 <p>百種主題影片，案例不斷更新</p>
                             </div>
                         </div>
-                        <div class="item">
+                        <div class="item" data-trigger>
                             <div class="icon-holder">
                                 <i class="icon icon-54"></i>
                             </div>
@@ -124,7 +151,7 @@
                                 <p>動態腳本快速對焦，降低溝通成本</p>
                             </div>
                         </div>
-                        <div class="item">
+                        <div class="item" data-trigger>
                             <div class="icon-holder">
                                 <i class="icon icon-55"></i>
                             </div>
@@ -133,7 +160,7 @@
                                 <p>不需報價再議價，省時又省力</p>
                             </div>
                         </div>
-                        <div class="item">
+                        <div class="item" data-trigger>
                             <div class="icon-holder">
                                 <i class="icon icon-56"></i>
                             </div>
@@ -2651,6 +2678,38 @@
                     },
                 },
             });
+
+            if (document.querySelector("[data-features]")) {
+                const features = document.querySelector("[data-features]");
+                const slide = features.querySelector(".swiper-container");
+                const triggers = features.querySelectorAll("[data-trigger]");
+                const swiperFeatures = new Swiper(slide, {
+                    spped: 1200,
+                    slidesPerView: 1,
+                    spaceBetween: 0,
+                    effect: "fade", // 加入fade效果的設定項
+                    fadeEffect: {
+                        crossFade: true, // 啟用 crossFade 效果
+                    },
+                });
+
+                triggers.forEach((trigger, index) => {
+                    trigger.addEventListener("click", function () {
+                        swiperFeatures.slideTo(index); // 將swiper滑動到該元素對應的索引(index)
+                        setActiveTrigger(index); // 將當前觸發器設為active並移除其他觸發器的active類別
+                    });
+                });
+
+                function setActiveTrigger(activeIndex) {
+                    triggers.forEach((trigger, index) => {
+                        if (index === activeIndex) {
+                            trigger.classList.add("--active");
+                        } else {
+                            trigger.classList.remove("--active");
+                        }
+                    });
+                }
+            }
         </script>
     </body>
 </html>
