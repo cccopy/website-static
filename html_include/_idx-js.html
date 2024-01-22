@@ -1,0 +1,81 @@
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+    const idxcols = document.querySelectorAll("[data-idxcol]");
+    idxcols.forEach((element) => {
+        const slide = element.querySelector(".swiper-container");
+        const prev = element.querySelector(".swiper-button-prev");
+        const next = element.querySelector(".swiper-button-next");
+        const swiperCol = new Swiper(slide, {
+            // Default parameters
+            slidesPerView: 1,
+            spaceBetween: 16,
+            navigation: {
+                nextEl: next,
+                prevEl: prev,
+            },
+            breakpoints: {
+                // when window width is >= 480px
+                740: {
+                    slidesPerView: 2,
+                    spaceBetween: 24,
+                },
+                980: {
+                    slidesPerView: 3,
+                    spaceBetween: 24,
+                },
+                1380: {
+                    slidesPerView: 4,
+                    spaceBetween: 24,
+                },
+            },
+        });
+    });
+    const swiperFeedback = new Swiper("[data-feedback]", {
+        // Default parameters
+        slidesPerView: 1,
+        spaceBetween: 16,
+        navigation: {
+            nextEl: ".next-feedback",
+            prevEl: ".prev-feedback",
+        },
+        breakpoints: {
+            // when window width is >= 480px
+            740: {
+                slidesPerView: 2,
+                spaceBetween: 24,
+            },
+        },
+    });
+
+    if (document.querySelector("[data-features]")) {
+        const features = document.querySelector("[data-features]");
+        const slide = features.querySelector(".swiper-container");
+        const triggers = features.querySelectorAll("[data-trigger]");
+        const swiperFeatures = new Swiper(slide, {
+            spped: 1200,
+            slidesPerView: 1,
+            spaceBetween: 0,
+            effect: "fade", // 加入fade效果的設定項
+            fadeEffect: {
+                crossFade: true, // 啟用 crossFade 效果
+            },
+        });
+
+        triggers.forEach((trigger, index) => {
+            trigger.addEventListener("click", function () {
+                swiperFeatures.slideTo(index); // 將swiper滑動到該元素對應的索引(index)
+                setActiveTrigger(index); // 將當前觸發器設為active並移除其他觸發器的active類別
+            });
+        });
+
+        function setActiveTrigger(activeIndex) {
+            triggers.forEach((trigger, index) => {
+                if (index === activeIndex) {
+                    trigger.classList.add("--active");
+                } else {
+                    trigger.classList.remove("--active");
+                }
+            });
+        }
+    }
+</script>

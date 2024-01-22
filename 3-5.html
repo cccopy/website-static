@@ -26,23 +26,59 @@
 <header class="header">
     <a href="index.html" class="logo" title="CVO">CVO</a>
     <div class="fn">
-        <a href="#">預約諮詢</a>
-        <a href="#">價格</a>
-        <a href="#">登入 / 註冊</a>
+        <a href="#" class="btn blue" data-openmodal="modal-3-2">登入 / 註冊</a>
+        <a class="nav-toggle" href="#" id="nav-toggle">
+            <div class="hamburger">
+                <span class="line line-1"></span>
+                <span class="line line-2"></span>
+                <span class="line line-3"></span>
+            </div>
+        </a>
     </div>
-    <a class="nav-toggle" href="#" id="nav-toggle">
-        <div class="hamburger">
-            <span class="line line-1"></span>
-            <span class="line line-2"></span>
-            <span class="line line-3"></span>
-        </div>
-    </a>
 </header>
 
 
 
 <nav class="nav">
-    <div class="main-nav"></div>
+    <div class="main-nav">
+        <div class="left">
+            <div class="nav-item has-dropmenu" data-dropmenu>
+                <a href="" data-trigger>分類</a>
+                <div class="dropmenu">
+                    <a href="">全部</a>
+                    <a href="">行銷分類</a>
+                    <a href="">質感指標</a>
+                    <a href="">龍年紅通通</a>
+                    <a href="">分類名稱4</a>
+                    <a href="">年輕活潑系列</a>
+                    <a href="">分類名稱6</a>
+                    <a href="">分類名稱7</a>
+                    <a href="">穩重系列</a>
+                    <a href="">分類名稱9</a>
+                    <a href="">分類名稱10</a>
+                    <a href="">分類名稱11</a>
+                    <a href="">分類名稱12</a>
+                    <a href="">分類名稱13</a>
+                    <a href="">分類名稱14</a>
+                    <a href="">分類名稱15</a>
+                    <a href="">分類名稱16</a>
+                    <a href="">分類名稱17</a>
+                    <a href="">分類名稱18</a>
+                </div>
+            </div>
+            <div class="nav-item">
+                <a href="">活動</a>
+            </div>
+        </div>
+        <div class="right">
+            <div class="nav-item">
+                <a href="">預約諮詢</a>
+            </div>
+            <div class="nav-item">
+                <a href="">價格</a>
+            </div>
+        </div>
+    </div>
 </nav>
 
 
@@ -594,9 +630,9 @@
         </div>
         <div class="modal-footer">
             <div class="btn-area">
-                <button class="btn blue">
+                <a class="btn blue" href="index-logged.html">
                     <span>登入</span>
-                </button>
+                </a>
             </div>
             <div class="fn-area">
                 <div class="text-center fz-small fc-gray">沒有收到Email嗎？ <a href="#" class="link blue">再試一次</a></div>
@@ -726,9 +762,9 @@
         </div>
         <div class="modal-footer">
             <div class="btn-area">
-                <button class="btn blue">
+                <a class="btn blue" href="index-logged.html">
                     <span>立即登入</span>
-                </button>
+                </a>
             </div>
             <div class="fn-area">
                 <div class="text-center fz-small fc-gray">還沒成為會員？<a href="#" class="link black">立即註冊</a>。</div>
@@ -741,6 +777,53 @@
 
 
 <script>
+    /* 選單點擊 */
+    const dropmenus = document.querySelectorAll("[data-dropmenu]");
+    const navtoggle = document.querySelector("#nav-toggle");
+    const nav = document.querySelector(".nav");
+    dropmenus.forEach((element) => {
+        const trigger = element.querySelector("[data-trigger]");
+        trigger.addEventListener("click", (e) => {
+            // 切換 --active 類別
+            element.classList.toggle("--active");
+
+            // 如果元素上有 .for-member 類別，則進行額外的操作
+            if (element.classList.contains("for-member")) {
+                // 移除 --active 類別
+                nav.classList.remove("--active");
+                navtoggle.classList.remove("--active");
+            }
+
+            e.preventDefault();
+            e.stopPropagation(); // 防止事件冒泡到 document 上
+        });
+    });
+    navtoggle.addEventListener("click", (e) => {
+        // 切換 --active 類別
+        navtoggle.classList.toggle("--active");
+        nav.classList.toggle("--active");
+        dropmenus.forEach((element) => {
+            element.classList.remove("--active");
+        });
+
+        e.preventDefault();
+        e.stopPropagation(); // 防止事件冒泡到 document 上
+    });
+
+    // 監聽 document 點擊事件
+    document.addEventListener("click", (e) => {
+        // 確認點擊的元素是否為 dropmenu 或其子元素
+        const isClickInsideDropmenu = e.target.closest("[data-dropmenu]");
+
+        // 若點擊範圍不在 dropmenu 內，則移除所有 --active 類別
+        if (!isClickInsideDropmenu) {
+            dropmenus.forEach((dropmenu) => {
+                if (dropmenu.classList.contains("--active")) {
+                    dropmenu.classList.remove("--active");
+                }
+            });
+        }
+    });
     //密碼判斷是否出現眼睛
     const body = document.querySelector("body");
     const togglePassword = document.querySelectorAll("[data-togglePassword]");

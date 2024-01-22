@@ -1,4 +1,51 @@
 <script>
+    /* 選單點擊 */
+    const dropmenus = document.querySelectorAll("[data-dropmenu]");
+    const navtoggle = document.querySelector("#nav-toggle");
+    const nav = document.querySelector(".nav");
+    dropmenus.forEach((element) => {
+        const trigger = element.querySelector("[data-trigger]");
+        trigger.addEventListener("click", (e) => {
+            // 切換 --active 類別
+            element.classList.toggle("--active");
+
+            // 如果元素上有 .for-member 類別，則進行額外的操作
+            if (element.classList.contains("for-member")) {
+                // 移除 --active 類別
+                nav.classList.remove("--active");
+                navtoggle.classList.remove("--active");
+            }
+
+            e.preventDefault();
+            e.stopPropagation(); // 防止事件冒泡到 document 上
+        });
+    });
+    navtoggle.addEventListener("click", (e) => {
+        // 切換 --active 類別
+        navtoggle.classList.toggle("--active");
+        nav.classList.toggle("--active");
+        dropmenus.forEach((element) => {
+            element.classList.remove("--active");
+        });
+
+        e.preventDefault();
+        e.stopPropagation(); // 防止事件冒泡到 document 上
+    });
+
+    // 監聽 document 點擊事件
+    document.addEventListener("click", (e) => {
+        // 確認點擊的元素是否為 dropmenu 或其子元素
+        const isClickInsideDropmenu = e.target.closest("[data-dropmenu]");
+
+        // 若點擊範圍不在 dropmenu 內，則移除所有 --active 類別
+        if (!isClickInsideDropmenu) {
+            dropmenus.forEach((dropmenu) => {
+                if (dropmenu.classList.contains("--active")) {
+                    dropmenu.classList.remove("--active");
+                }
+            });
+        }
+    });
     //密碼判斷是否出現眼睛
     const body = document.querySelector("body");
     const togglePassword = document.querySelectorAll("[data-togglePassword]");
