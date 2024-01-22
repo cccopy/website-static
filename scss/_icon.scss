@@ -10,6 +10,8 @@ $iconsetCount: 80; //必填，iconset長度數量
     -webkit-mask-size: contain;
     //-webkit-mask-position: center;
     -webkit-mask-repeat: no-repeat;
+    transition: all 0.3s $ease;
+    transition-property: background-color, color, opacity;
 }
 
 @mixin icon($index) {
@@ -21,6 +23,8 @@ $iconsetCount: 80; //必填，iconset長度數量
     -webkit-mask-repeat: no-repeat;
     $iconPosX: percentage((100 / ($iconsetCount - 1)) * ($index - 1) / 100);
     -webkit-mask-position: round($iconPosX * 100) / 100 0;
+    transition: all 0.3s $ease;
+    transition-property: background-color, color, opacity;
 }
 
 @mixin iconPos($index) {

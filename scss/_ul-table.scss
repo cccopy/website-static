@@ -141,4 +141,9 @@
             }
         }
     }
+    .fn-area {
+        .btn + .btn {
+            margin-bottom: 0;
+        }
+    }
 }

@@ -719,6 +719,9 @@
             height: 1px;
             border-top: 1px solid #ddd;
         }
+        &.no-pdt {
+            padding-top: 0;
+        }
     }
     &.verify {
         .value {
