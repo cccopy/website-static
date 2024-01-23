@@ -6,8 +6,17 @@
     padding-bottom: 0;
     position: relative;
     background-color: #fef9ea;
+    @include md {
+        padding-top: $pd-xs * 1.5;
+    }
     @include lg {
         padding-bottom: $pd-xs * 1.5;
+    }
+    @include xxl {
+        padding-top: $pd-xs * 1.75;
+    }
+    @include xxxl {
+        padding-top: $pd-xs * 2;
     }
     &:after {
         content: "";
