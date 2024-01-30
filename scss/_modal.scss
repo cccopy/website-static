@@ -13,11 +13,11 @@
     margin-bottom: auto;
     position: relative;
     z-index: 3;
+    overflow: hidden;
     @include xs_xxl {
         width: clamp(360px, 50%, 380px);
     }
 
-    overflow: hidden;
     @include xxl {
         width: 420px;
     }
@@ -26,6 +26,17 @@
     // }
     @include xxxl {
         width: 500px;
+    }
+    &.cute-container {
+        @include xs_xxl {
+            width: 320px;
+        }
+        @include xxl {
+            width: 320px;
+        }
+        @include xxl {
+            width: 360px;
+        }
     }
 }
 .modal-header {
@@ -131,10 +142,6 @@
         text-align: center;
     }
 }
-.btn-area {
-    display: flex;
-    justify-content: center;
-}
 
 .modal-footer {
     padding: 0 $pd-xs $pd-xs * 1.5;
@@ -144,6 +151,52 @@
         padding-top: 12px;
     }
 }
+.cute-container {
+    overflow: visible;
+    .modal-cute {
+        position: relative;
+        isolation: isolate;
+        .cute-body {
+            border: 4px solid $color-main-light;
+            background-color: #fff;
+            border-radius: $rd;
+            padding: $pd-xs;
+            position: relative;
+            z-index: 3;
+        }
+        p {
+            padding-top: $gap;
+        }
+        .btn-area {
+            justify-content: flex-end;
+            padding-top: $gap * 1.5;
+            .btn + .btn {
+                margin-left: 2em;
+            }
+        }
+        .deco-item {
+            z-index: 1;
+            @include xs_lg {
+                display: block;
+            }
+        }
+        .deco-14 {
+            transform: translate(-60%, -50%);
+            @include xs_sm {
+                transform: translate(0, 85%);
+                bottom: 0;
+                top: initial;
+            }
+        }
+        .deco-13 {
+            transform: translate(30%, -70%);
+            @include xs_sm {
+                transform: translate(0, -80%);
+            }
+        }
+    }
+}
+
 .has-modal {
     overflow: hidden;
 }

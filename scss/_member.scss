@@ -184,6 +184,14 @@
         }
     }
     .text-holder {
+        @include xs_lg {
+            padding: $gap $gap 0;
+            background-color: #fff;
+        }
+        @include md_lg {
+            padding: $gap;
+            background-color: #fff;
+        }
         @include lg {
             padding-left: $pd-xs;
         }

@@ -2,6 +2,8 @@
     background-color: #001453;
     color: #fff;
     padding-top: 60px;
+    z-index: 9;
+    position: relative;
     .container {
         padding-bottom: 60px;
         align-items: center;
@@ -87,6 +89,9 @@
     .ft-contact {
         color: #fff;
         margin: 25px 0 0 0;
+        a {
+            color: #fff;
+        }
         @include xs_md {
             li {
                 text-align: center;

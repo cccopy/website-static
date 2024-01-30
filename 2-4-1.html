@@ -154,7 +154,7 @@
                 <li>
                     <h5 class="fz-D">C.V.O 影音長</h5>
                 </li>
-                <li>02-2752-9069</li>
+                <li><a href="mailto:c.v.o@anchorfilmtw.com" class="ff-en">c.v.o@anchorfilmtw.com</a></li>
                 <li>台北市松山區復興北路181號12樓之2</li>
                 <li class="social">
                     <h5 class="bold fc-lightblue">追蹤我們</h5>
@@ -208,6 +208,7 @@
     const dropmenus = document.querySelectorAll("[data-dropmenu]");
     const navtoggle = document.querySelector("#nav-toggle");
     const nav = document.querySelector(".nav");
+    const body = document.querySelector("body");
     dropmenus.forEach((element) => {
         const trigger = element.querySelector("[data-trigger]");
         trigger.addEventListener("click", (e) => {
@@ -252,37 +253,37 @@
         }
     });
     //密碼判斷是否出現眼睛
-    const body = document.querySelector("body");
-    const togglePassword = document.querySelectorAll("[data-togglePassword]");
-    togglePassword.forEach((element) => {
-        const input = element.querySelector("input");
-        const eye = element.querySelector(".eye");
-        eye.addEventListener("click", function (e) {
-            eye.classList.toggle("--show");
-            if (input.type === "password") {
-                input.type = "text";
+    if (document.querySelector("[data-togglePassword]")) {
+        const togglePassword = document.querySelectorAll("[data-togglePassword]");
+        togglePassword.forEach((element) => {
+            const input = element.querySelector("input");
+            const eye = element.querySelector(".eye");
+            eye.addEventListener("click", function (e) {
+                eye.classList.toggle("--show");
+                if (input.type === "password") {
+                    input.type = "text";
+                } else {
+                    input.type = "password";
+                }
+            });
+        });
+        body.addEventListener("keyup", function (e) {
+            var target = e.target;
+            var type = target.type;
+            var parent = target.parentNode;
+
+            if (type == "password") {
+                if (target.value != "") {
+                    // console.log('有值');
+                    parent.classList.add("show-eye");
+                } else {
+                    //console.log('空值');
+                    parent.classList.remove("show-eye");
+                }
             } else {
-                input.type = "password";
             }
         });
-    });
-
-    body.addEventListener("keyup", function (e) {
-        var target = e.target;
-        var type = target.type;
-        var parent = target.parentNode;
-
-        if (type == "password") {
-            if (target.value != "") {
-                // console.log('有值');
-                parent.classList.add("show-eye");
-            } else {
-                //console.log('空值');
-                parent.classList.remove("show-eye");
-            }
-        } else {
-        }
-    });
+    }
 
     /*操作 modal*/
     let currentLevel = 0;

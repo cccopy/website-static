@@ -82,37 +82,79 @@
 </nav>
 
 
-        <div class="page">
-            <section class="gt-body bg-upload-finish">
-                <div class="container recipe">
-                    <div class="left">
-                        <h3 class="fz-A text-center">
-                            <span class="fc-orange swing-slash-left">\</span>
-                            <strong class="ff-en fc-black">DONE!</strong>
-                            <span class="fc-orange swing-slash-right">/</span>
-                        </h3>
-                        <div class="chief-holder">
-                            <i class="chief flexible chief-6"></i>
+        <div class="page bg-prd-detail need-login">
+            <section class="prd-banner">
+                <div class="container part-top">
+                    <div class="part-left">
+                        <div class="video-container">
+                            <div class="cover-mask">
+                                <button class="btn-play" data-playvideo>
+                                    <i class="icon icon-49 orange"></i>
+                                </button>
+                            </div>
+                            <video src="https://media.istockphoto.com/id/1474000584/video/abstract-seamless-loop-animation-background-with-a-colorful-geometric-pattern-is-a-great.mp4?s=mp4-640x640-is&k=20&c=_mviO46PCXEQneiflHHkT40Ssa8V72qQwjPeXq2-EG8=" controls="" controlslist="nodownload" autoplay="" loop=""></video>
                         </div>
                     </div>
-                    <div class="right">
-                        <div class="arrow-box arrow-left">
-                            <strong class="fz-B fc-brown">太好了！你的專屬影片食材已提交</strong>
+                    <div class="part-right">
+                        <div class="title-holder">
+                            <h1 class="fz-A">
+                                30秒手繪 <br>
+                                你的資訊重點
+                            </h1>
+                            <h2 class="fz-D fc-orange">視覺圖像｜</h2>
                         </div>
+                        <ul class="map-ul">
+                            <li>
+                                <div class="field">版式分類</div>
+                                <div class="value">
+                                    <a href="" class="tag tag-large border">動畫</a>
+                                    <a href="" class="tag tag-large border">資訊設計</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="field">質感指標</div>
+                                <div class="value">
+                                    <a href="" class="tag tag-large orange">視覺圖像</a>
+                                    <a href="" class="tag tag-large orange">美式手繪風</a>
+                                    <a href="" class="tag tag-large orange">低光源</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="field"><i class="icon icon-40 orange"></i>影片長度</div>
+                                <div class="value">
+                                    <div class="time">
+                                        <strong class="fz-A ff-en extra-bold fc-brown">2</strong>
+                                        <p class="fz-small">分</p>
+                                        <strong class="fz-A ff-en extra-bold fc-brown">30</strong>
+                                        <p class="fz-small">秒</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="field"><i class="icon icon-32 orange"></i>製作時程</div>
+                                <div class="value">
+                                    <div class="time">
+                                        <strong class="fz-A ff-en extra-bold fc-brown">40</strong>
+                                        <p class="fz-small">天</p>
+                                    </div>
+                                    <div class="remark">
+                                        <i class="icon icon-41 small gray"></i>
+                                        <p class="fc-gray fz-xs">製作時程為動態腳本確認後的實際工作天數計算。</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
 
-                        <div class="fc-brown">
-                            <p>
-                                將於 <strong class="fz-B smaller bold">3日內</strong> 進行素材審核！ <br>如有任何問題， 請來信客服信箱：
-                                <a href="mailto:c.v.o@anchorfilmtw.com">c.v.o@anchorfilmtw.com</a>
-                            </p>
-                            <p>
-                                接下來就交給我們吧！ <br>
-                                提交動態腳本大約需要 <strong class="fz-B smaller bold">「3個工作天」</strong>， <br>請拭目以待！ <br>
-                                系統將寄發Email通知， <br>
-                                可至 <a href="#" class="link orange">「訂單管理-訂單進度查詢」</a> 隨時查看進度
-                            </p>
-                        </div>
-                    </div>
+                <i class="deco-item deco-9"></i>
+            </section>
+            <section class="upgrade">
+                <div class="text-holder">
+                    <h6 class="fz-C fc-white">成為 <a href="#">付費會員</a> 瀏覽完整資訊</h6>
+                </div>
+                <div class="chief-holder">
+                    <i class="chief chief-1"></i>
                 </div>
             </section>
         </div>
@@ -971,5 +1013,100 @@
 </script>
 
 
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script>
+            const swiperPrd = new Swiper(".swiper-prd", {
+                // Default parameters
+                slidesPerView: 2,
+                spaceBetween: 10,
+                navigation: {
+                    nextEl: ".next-prd",
+                    prevEl: ".prev-prd",
+                },
+                breakpoints: {
+                    // when window width is >= 480px
+                    740: {
+                        slidesPerView: 3,
+                        spaceBetween: 20,
+                    },
+                },
+            });
+            const swiperProcess = new Swiper(".swiper-process", {
+                // Default parameters
+                slidesPerView: 1,
+                spaceBetween: 15,
+                navigation: {
+                    nextEl: ".next-process",
+                    prevEl: ".prev-process",
+                },
+                breakpoints: {
+                    // when window width is >= 480px
+                    576: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                    },
+                    740: {
+                        slidesPerView: 3,
+                        spaceBetween: 20,
+                    },
+                    980: {
+                        slidesPerView: 4,
+                        spaceBetween: 20,
+                    },
+                    1700: {
+                        slidesPerView: 4,
+                        spaceBetween: 30,
+                    },
+                },
+            });
+
+            if (document.querySelector("[data-collect]")) {
+                const collects = document.querySelectorAll("[data-collect]");
+                collects.forEach((element) => {
+                    element.addEventListener("click", () => {
+                        element.classList.toggle("--active");
+                    });
+                });
+            }
+
+            if (document.querySelector("[data-marquee]")) {
+                const marqueeHolder = document.querySelector("[data-marquee]");
+                const marquee = marqueeHolder.querySelector(".marquee");
+                const items = marqueeHolder.querySelectorAll(".item");
+
+                const itemWidth = items[0].offsetWidth;
+                const containerWidth = marquee.clientWidth;
+
+                // 计算需要复制的 .item 数量
+                const numCopies = Math.ceil(containerWidth / itemWidth);
+
+                // 复制 .item 到 marquee 中
+                for (let i = 0; i < numCopies; i++) {
+                    items.forEach((item) => {
+                        marquee.appendChild(item.cloneNode(true));
+                    });
+                }
+
+                let scrollPosition = 0;
+                const speed = 1; // 调整滚动速度
+
+                function updateMarquee() {
+                    scrollPosition -= speed;
+                    marquee.style.transform = `translateX(${scrollPosition}px)`;
+
+                    if (scrollPosition <= -containerWidth) {
+                        // 当滚动到一个 .item 的宽度时，将滚动位置重置到0
+                        scrollPosition = 0;
+                    }
+
+                    requestAnimationFrame(updateMarquee);
+                }
+
+                // 等待页面加载完成后再开始滚动
+                window.addEventListener("load", () => {
+                    updateMarquee();
+                });
+            }
+        </script>
     </body>
 </html>
