@@ -23,44 +23,10 @@
     </head>
     <body>
 
-<header class="header logged">
+<header class="header">
     <a href="index.html" class="logo" title="CVO">CVO</a>
     <div class="fn">
-        <div class="nav-item has-dropmenu no-arrow for-member" data-dropmenu>
-            <a href="#" class="btn-member" data-trigger>
-                <div class="avatar" style="background-image: url('https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"></div>
-            </a>
-            <div class="dropmenu small-col">
-                <a href="3-1-1.html">
-                    <i class="icon icon-9"></i>
-                    <span>帳戶設定&權限</span>
-                </a>
-                <a href="3-3.html">
-                    <i class="icon icon-10"></i>
-                    <span>我的收藏</span>
-                </a>
-                <a href="3-4.html">
-                    <i class="icon icon-6"></i>
-                    <span>我的E-Coupon</span>
-                </a>
-                <a href="3-5.html">
-                    <i class="icon icon-5"></i>
-                    <span>購物車</span>
-                </a>
-                <a href="3-6.html" class="--active">
-                    <i class="icon icon-7"></i>
-                    <span>我的AI樣品</span>
-                </a>
-                <a href="3-7.html">
-                    <i class="icon icon-8"></i>
-                    <span>訂單管理</span>
-                </a>
-                <a href="index.html" class="">
-                    <i class="icon icon-59"></i>
-                    <span>登出</span>
-                </a>
-            </div>
-        </div>
+        <a href="#" class="btn blue" data-openmodal="modal-3-2">登入 / 註冊</a>
         <a class="nav-toggle" href="#" id="nav-toggle">
             <div class="hamburger">
                 <span class="line line-1"></span>
@@ -116,85 +82,64 @@
 </nav>
 
 
-        <div class="page bg-member">
-            <div class="container">
-                <div class="breadcrumb">
-                    <a href="#">首頁</a>
-                    <a href="#">會員專區</a>
-                    <a href="#">購物車</a>
-                </div>
-            </div>
-            <div class="container layout-sidebar">
-                <div class="sidebar">
-                    <div class="sb-header">
-                        <h2 class="fz-D">會員專區</h2>
-                    </div>
-
-                    <div class="sb-body">
-                        <a href="3-1-1.html">
-                            <i class="icon icon-9"></i>
-                            <span>帳戶設定&權限</span>
-                        </a>
-                        <a href="3-3.html">
-                            <i class="icon icon-10"></i>
-                            <span>我的收藏</span>
-                        </a>
-                        <a href="3-4.html">
-                            <i class="icon icon-6"></i>
-                            <span>我的E-Coupon</span>
-                        </a>
-                        <a href="3-5.html" class="--active">
-                            <i class="icon icon-5"></i>
-                            <span>購物車</span>
-                        </a>
-                        <a href="3-6.html">
-                            <i class="icon icon-7"></i>
-                            <span>我的AI樣品</span>
-                        </a>
-                        <a href="3-7.html">
-                            <i class="icon icon-8"></i>
-                            <span>訂單管理</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="content">
-                    <div class="ct-header">
-                        <h1 class="fz-C">購物車</h1>
-                    </div>
-                    <div class="ct-body">
-                        <ul class="cart-flow">
-                            <li class="--active">
-                                <i class="icon icon-5"></i>
-                                <span class="fz-small">購物車明細</span>
-                            </li>
-                            <li class="--active">
-                                <i class="icon icon-12"></i>
-                                <span class="fz-small">確認訂單</span>
-                            </li>
-                            <li class="--active">
-                                <i class="icon icon-23"></i>
-                                <span class="fz-small">付款</span>
-                            </li>
-                            <li class="--active">
-                                <i class="icon icon-22"></i>
-                                <span class="fz-small">訂購完成</span>
-                            </li>
-                        </ul>
-
-                        <div class="text-block center">
-                            <i class="icon icon-12 green super"></i>
-                            <h3 class="fz-C">交易成功！你的訂單已成立</h3>
+        <div class="page">
+            <section class="gt-body bg-mbship">
+                <div class="container-s upgrade-progress">
+                    <div class="top-text-area">
+                        <div class="level-holder">
+                            <div class="level-icon level-3"></div>
+                        </div>
+                        <div class="text-holder">
+                            <h6 class="fz-E">您將升級</h6>
                             <br>
-
-                            <p>
-                                提醒你：請於7天內至「訂單管理-訂單進度查詢」提交素材！若於7天內不提交素材，將視為「取消訂單」， <br>
-                                <strong class="fc-alert">將扣除10%交易手續費後，直接進行退款。</strong>
-                            </p>
+                            <h3 class="fz-B text-center fc-brown">銅級會員</h3>
+                            <h3 class="fz-B text-center fc-alert">年費 <strong class="ff-en"> NT$ 100,000</strong></h3>
+                            <br>
                         </div>
                     </div>
-                    <div class="ct-footer"></div>
+                    <div class="mb-benefits">
+                        <div class="note-area">
+                            <h2 class="bold">提醒你：</h2>
+                            <ul class="ul">
+                                <li>付款成功日起算+365天，可不限次數瀏覽全站商品。</li>
+                                <li>於銅級會員效期內，可使用腳本製作功能50次（請於效期內使用完畢，不得展延。）</li>
+                            </ul>
+                        </div>
+
+                        <div class="form-container">
+                            <div class="form-item full text-only deco-line">
+                                <div class="text-center fc-gray">請詳細閱讀並同意合約內容</div>
+                            </div>
+                            <div class="form-item full textarea-read">
+                                <textarea name="" id="" cols="30" rows="10" readonly="readonly">
+    1. 與甲方合作之期間，乙方同意其於合作範圍內所完成或設想之任何發明或創作、工作或任何形式之智慧財產權，其智慧財產權之歸屬包括但不限於專利、著作權、商業祕密及其他相關權利均應無償歸屬甲方所有，乙方並同意不行使著作人格權。
+    
+    2. 乙方應隨時告知甲方其於執行業務時發現之發明、改良物。該發明或改良物之所有權應歸屬甲方所有，且甲方無需支付額外費用予乙方；在甲方合理之要求及負擔費用之情形下，乙方應辦理一切必要手續及相關文件，俾使甲方對該發明或改良物取得完整且合法之權利。
+    
+    
+    3. 未經甲方同意，乙方不得為任何形式之複製或主張，或申請登記為自己或第三人之智慧財產權；乙方應依甲方之需求協助甲方取得、確保及執行前述智慧財產權。
+    4. 乙方聲明及保證，乙方得依本合約自由移轉發明物（如該發明物為乙方發明）、相關資訊及其他於合作期間構思、原創或製作之智慧財產權，並且無第三人得向乙方主張任何權利、質押、費用、任何種類的負擔，且乙方就此對第三人亦不負任何責任或義務。
+                                </textarea>
+                            </div>
+                            <div class="form-item full no-field must center">
+                                <div class="field">must</div>
+                                <div class="value">
+                                    <input type="checkbox" id="ck1" name="ck1" value="ck1">
+                                    <label for="ck1">我已詳細閱讀並同意合約內容</label>
+                                </div>
+                                <div class="help-word"><i class="icon icon-13"></i>請詳細閱讀並同意合約內容</div>
+                            </div>
+                        </div>
+
+                        <div class="btn-area mobile-col">
+                            <button class="btn btn-large orange">
+                                <i class="icon icon-23"></i>
+                                <span>確認付款</span>
+                            </button>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </section>
 
 <div class="dev">
     <div class="container">

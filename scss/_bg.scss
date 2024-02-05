@@ -108,6 +108,44 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+.bg-mbship {
+    background-color: $color-bg-yellow;
+    background: $color-bg-yellow url("../images/bg/bg-mbship.webp") no-repeat center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include xs_lg {
+        background-size: contain;
+    }
+}
+.bg-mbship-2 {
+    background-color: $color-bg-yellow;
+    background: $color-bg-yellow url("../images/bg/bg-mbship-2.webp") no-repeat center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include xs_lg {
+        background-position: right top;
+    }
+}
+
+.bg-3-7-3 {
+    background-color: $color-bg-yellow;
+    background: $color-bg-yellow url("../images/bg/bg-3-7-3.webp") no-repeat center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    .gt-body {
+        background-color: transparent;
+    }
+}
+.bg-3-7-4 {
+    background-color: $color-bg-yellow;
+    background: $color-bg-yellow url("../images/bg/bg-3-7-4.webp") no-repeat center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    .gt-body {
+        background-color: transparent;
+    }
+}
 .deco-item {
     display: block;
     position: absolute;
@@ -352,5 +390,30 @@
     z-index: 0;
     &:after {
         padding-bottom: 133%;
+    }
+}
+
+.deco-22 {
+    width: 72%;
+    right: 0;
+    bottom: 0;
+
+    background-image: url("../images/item/deco-item-37-1.svg");
+    background-position: right top;
+    z-index: 0;
+    &:after {
+        padding-bottom: 124%;
+    }
+}
+.deco-23 {
+    width: 44.4%;
+    left: 0;
+    bottom: -20%;
+    background-image: url("../images/item/deco-item-37-2.png");
+    background-position: right top;
+    z-index: 0;
+    animation: text-step 1.5s step-end infinite;
+    &:after {
+        padding-bottom: 187%;
     }
 }

@@ -1,0 +1,63 @@
+.popup {
+    position: fixed;
+    width: 100%;
+    height: 100dvh;
+    overflow: hidden;
+    background-color: rgba(#000, 0.8);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    left: 0;
+    top: 0;
+    visibility: hidden;
+    pointer-events: none;
+    opacity: 0;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.35s $ease;
+    transition-property: opacity, transform;
+    .popup-container {
+        transform: translateY(50px);
+        opacity: 0;
+        transition: all 0.6s $ease;
+        transition-property: opacity, transform;
+    }
+    &.--active {
+        visibility: visible;
+        pointer-events: auto;
+        opacity: 1;
+        .popup-container {
+            transform: none;
+            opacity: 1;
+        }
+    }
+
+    .video-container {
+        width: clamp(320px, 90vw, 390px);
+        @include md {
+            width: clamp(640px, 60vw, 1100px);
+        }
+    }
+    .btn-close {
+        position: absolute;
+        right: $pd-xs;
+        top: $pd-xs;
+        cursor: pointer;
+
+        .icon {
+            &:before {
+                width: 48px;
+                height: 48px;
+                background-color: #fff;
+            }
+        }
+        @media (hover: hover) {
+            &:hover {
+                .icon {
+                    transform: scale(1.25);
+                }
+            }
+        }
+    }
+}

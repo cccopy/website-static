@@ -7,6 +7,16 @@
     font-family: $font-title;
     font-weight: 700;
     line-height: 1.25em;
+    &.has-icon {
+        display: flex;
+        align-items: center;
+        .icon {
+            margin-right: 5px;
+        }
+    }
+    &.text-center {
+        justify-content: center;
+    }
 }
 //40
 .fz-A {
@@ -21,20 +31,21 @@
 //32-28
 .fz-B {
     font-size: 1.75em;
+
     @include xxl {
         font-size: 2em;
     }
-    @include xxxl {
-        font-size: 2.25em;
-    }
+    // @include xxxl {
+    //     font-size: 2.25em;
+    // }
     &.smaller {
         font-size: 1.5em;
         @include xxl {
             font-size: 1.75em;
         }
-        @include xxxl {
-            font-size: 2em;
-        }
+        // @include xxxl {
+        //     font-size: 2em;
+        // }
     }
 }
 //24
@@ -53,9 +64,9 @@
     @include xxl {
         font-size: 1.375em;
     }
-    @include xxxl {
-        font-size: 1.5em;
-    }
+    // @include xxxl {
+    //     font-size: 1.5em;
+    // }
 }
 //18
 .fz-E {
@@ -152,12 +163,12 @@
 //     font-size: 0.875em;
 // }
 
-// .elips-1 {
-//     overflow: hidden;
-//     text-overflow: ellipsis;
-//     -webkit-line-clamp: 1;
-//     display: -webkit-box;
-//     height: 1.375em;
-//     line-height: 1.375em;
-//     -webkit-box-orient: vertical;
-// }
+.elips-1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    display: -webkit-box;
+    height: 1.375em;
+    line-height: 1.375em;
+    -webkit-box-orient: vertical;
+}

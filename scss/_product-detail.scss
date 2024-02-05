@@ -115,11 +115,21 @@
         .img {
             border-radius: $rd / 2;
             border: 2px solid $color-border;
+            transition: border-color 0.35s $ease;
+            cursor: pointer;
+            @include xxxl {
+                border-width: 3px;
+            }
             &:before {
                 content: "";
                 display: block;
                 width: 100%;
                 padding-bottom: 56.25%;
+            }
+            @media (hover: hover) {
+                &:hover {
+                    border-color: $color-second;
+                }
             }
         }
     }
@@ -727,14 +737,17 @@
         color: #fff;
         text-decoration: underline;
     }
-    .chief {
+    .chief-holder {
         position: absolute;
         right: 5vw;
         top: 0;
-        transform: translateY(-22%) rotateY(180deg);
-        &:before {
-            width: 18vw;
-            height: 18vw;
+        transform: translateY(-25%) rotateY(180deg);
+        .chief {
+            animation: text-step 1.5s step-end infinite;
+            &:before {
+                width: 18vw;
+                height: 18vw;
+            }
         }
     }
 }

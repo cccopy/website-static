@@ -915,6 +915,43 @@
         display: flex;
         justify-content: center;
     }
+    &.only-video {
+        @include lg {
+            display: block;
+        }
+        .left-area {
+            margin: 0 auto;
+            width: 100%;
+        }
+        .top-text-area {
+            position: relative;
+
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding-bottom: $pd-xs;
+            margin-top: 1.5vw;
+            z-index: -1;
+            .deco-chief {
+                position: relative;
+                width: 20vw;
+
+                transform: translateY(9.5vw);
+                @include xxxl {
+                    max-width: 320px;
+                    transform: translateY(150px);
+                }
+                .deco-item {
+                    @include xs_lg {
+                        display: block;
+                    }
+                }
+            }
+            .fz-B {
+                width: max-content;
+            }
+        }
+    }
 }
 .timeline {
     height: 100%;

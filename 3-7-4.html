@@ -23,44 +23,10 @@
     </head>
     <body>
 
-<header class="header logged">
+<header class="header">
     <a href="index.html" class="logo" title="CVO">CVO</a>
     <div class="fn">
-        <div class="nav-item has-dropmenu no-arrow for-member" data-dropmenu>
-            <a href="#" class="btn-member" data-trigger>
-                <div class="avatar" style="background-image: url('https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"></div>
-            </a>
-            <div class="dropmenu small-col">
-                <a href="3-1-1.html">
-                    <i class="icon icon-9"></i>
-                    <span>帳戶設定&權限</span>
-                </a>
-                <a href="3-3.html">
-                    <i class="icon icon-10"></i>
-                    <span>我的收藏</span>
-                </a>
-                <a href="3-4.html">
-                    <i class="icon icon-6"></i>
-                    <span>我的E-Coupon</span>
-                </a>
-                <a href="3-5.html">
-                    <i class="icon icon-5"></i>
-                    <span>購物車</span>
-                </a>
-                <a href="3-6.html" class="--active">
-                    <i class="icon icon-7"></i>
-                    <span>我的AI樣品</span>
-                </a>
-                <a href="3-7.html">
-                    <i class="icon icon-8"></i>
-                    <span>訂單管理</span>
-                </a>
-                <a href="index.html" class="">
-                    <i class="icon icon-59"></i>
-                    <span>登出</span>
-                </a>
-            </div>
-        </div>
+        <a href="#" class="btn blue" data-openmodal="modal-3-2">登入 / 註冊</a>
         <a class="nav-toggle" href="#" id="nav-toggle">
             <div class="hamburger">
                 <span class="line line-1"></span>
@@ -116,110 +82,358 @@
 </nav>
 
 
-        <div class="page bg-member">
-            <div class="container">
-                <div class="breadcrumb">
-                    <a href="#">首頁</a>
-                    <a href="#">會員專區</a>
-                    <a href="#">購物車</a>
-                </div>
-            </div>
-            <div class="container layout-sidebar">
-                <div class="sidebar">
-                    <div class="sb-header">
-                        <h2 class="fz-D">會員專區</h2>
-                    </div>
-
-                    <div class="sb-body">
-                        <a href="3-1-1.html">
-                            <i class="icon icon-9"></i>
-                            <span>帳戶設定&權限</span>
-                        </a>
-                        <a href="3-3.html">
-                            <i class="icon icon-10"></i>
-                            <span>我的收藏</span>
-                        </a>
-                        <a href="3-4.html">
-                            <i class="icon icon-6"></i>
-                            <span>我的E-Coupon</span>
-                        </a>
-                        <a href="3-5.html" class="--active">
-                            <i class="icon icon-5"></i>
-                            <span>購物車</span>
-                        </a>
-                        <a href="3-6.html">
-                            <i class="icon icon-7"></i>
-                            <span>我的AI樣品</span>
-                        </a>
-                        <a href="3-7.html">
-                            <i class="icon icon-8"></i>
-                            <span>訂單管理</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="content">
-                    <div class="ct-header">
-                        <h1 class="fz-C">購物車</h1>
-                    </div>
-                    <div class="ct-body">
-                        <ul class="cart-flow">
-                            <li class="--active">
-                                <i class="icon icon-5"></i>
-                                <span class="fz-small">購物車明細</span>
-                            </li>
-                            <li class="--active">
-                                <i class="icon icon-12"></i>
-                                <span class="fz-small">確認訂單</span>
-                            </li>
-                            <li class="--active">
-                                <i class="icon icon-23"></i>
-                                <span class="fz-small">付款</span>
-                            </li>
-                            <li class="--active">
-                                <i class="icon icon-22"></i>
-                                <span class="fz-small">訂購完成</span>
-                            </li>
-                        </ul>
-
-                        <div class="text-block center">
-                            <i class="icon icon-12 green super"></i>
-                            <h3 class="fz-C">交易成功！你的訂單已成立</h3>
-                            <br>
-
-                            <p>
-                                提醒你：請於7天內至「訂單管理-訂單進度查詢」提交素材！若於7天內不提交素材，將視為「取消訂單」， <br>
-                                <strong class="fc-alert">將扣除10%交易手續費後，直接進行退款。</strong>
-                            </p>
+        <div class="page bg-3-7-4">
+            <section class="gt-body">
+                <div class="container video-editing">
+                    <div class="top-area">
+                        <h3 class="fz-B text-center fc-black">
+                            <span class="swing-slash-left">\</span>
+                            <strong class="fc-orange">修改建議說明</strong>
+                            <span class="swing-slash-right">/</span>
+                        </h3>
+                        <div class="text-holder">
+                            <p>您可直接點擊影片，將出現說明框，可直接輸入您希望修改的內容；並將會同步於影片下方條列整理。</p>
                         </div>
                     </div>
-                    <div class="ct-footer"></div>
-                </div>
-            </div>
+                    <div class="left-area">
+                        <h4 class="fz-D fc-orange">您的影片主題｜</h4>
+                        <h1 class="fz-B">改過的主題改過的主題</h1>
+                        <div class="video-container">
+                            <div class="cover-mask">
+                                <button class="btn-play" data-playvideo>
+                                    <i class="icon icon-49 orange"></i>
+                                </button>
+                            </div>
+                            <video src="https://media.istockphoto.com/id/1474000584/video/abstract-seamless-loop-animation-background-with-a-colorful-geometric-pattern-is-a-great.mp4?s=mp4-640x640-is&k=20&c=_mviO46PCXEQneiflHHkT40Ssa8V72qQwjPeXq2-EG8=" controls="" controlslist="nodownload" autoplay="" loop=""></video>
+                            <div class="tl-item">
+                                <div class="pick ff-en fc-orange">00:25</div>
+                                <div class="text-holder">
+                                    <textarea name="" id="" cols="30" rows="8"></textarea>
+                                    <div class="fn">
+                                        <button class="btn border">
+                                            <i class="icon icon-60"></i>
+                                            <span>刪除</span>
+                                        </button>
+                                        <button class="btn border-orange">
+                                            <i class="icon icon-50"></i>
+                                            <span>新增</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fn-area">
+                            <button class="btn border-orange btn-large" href="2-4-1.html">
+                                <i class="icon icon-61"></i>
+                                <span>複製線上預覽網址</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="right-area">
+                        <div class="timeline">
 
-<div class="dev">
-    <div class="container">
-        <h3 class="fz-D">這是可以刪除的，單純方便看彈窗</h3>
-        <button class="btn" data-openmodal="modal-3-1"><span>3-1 註冊(FB/Email)</span></button>
-        <button class="btn" data-openmodal="modal-3-1-2"><span>3-1-2 註冊成功</span></button>
-        <button class="btn" data-openmodal="modal-3-1-3"><span>3-1-3 驗證成功</span></button>
-        <button class="btn blue" data-openmodal="modal-3-1-1-2"><span>3-1-1-2 變更密碼</span></button>
-        <button class="btn blue" data-openmodal="modal-3-1-1-3"><span>3-1-1-3 變更行動電話</span></button>
-        <button class="btn blue" data-openmodal="modal-3-2-1"><span>3-2-1 忘記密碼</span></button>
-        <button class="btn blue" data-openmodal="modal-3-2-2"><span>3-2-2 忘記密碼 (Email已寄出)</span></button>
-        <button class="btn blue" data-openmodal="modal-3-2-3"><span>3-2-3 重設密碼</span></button>
-        <button class="btn blue" data-openmodal="modal-3-2"><span>3-2 登入</span></button>
-        <button class="btn blue" data-openmodal="modal-3-7-3-2"><span>3-7-3-2 成品已確認</span></button>
-        <button class="btn blue" data-openmodal="modal-3-7-4-1"><span>3-7-4-1 修改已提交</span></button>
-        <button class="btn" data-openmodal="modal-3-7-5"><span>3-7-5 用戶評價</span></button>
-        <button class="btn" data-openmodal="modal-3-7-5-1"><span>3-7-5-1 評價已提交</span></button>
-        <button class="btn brown" data-openmodal="modal-3-7-6"><span>3-7-6 取消訂單</span></button>
-        <button class="btn brown" data-openmodal="modal-3-7-6-2"><span>3-7-6-2 輸入銀行帳號</span></button>
-        <button class="btn brown" data-openmodal="modal-3-7-6-3"><span>3-7-6-3 取消成功</span></button>
-        <button class="btn brown" data-openmodal="modal-3-8-2-1"><span>3-8-2-1 表單已成功提交</span></button>
+<div class="tl-item">
+    <div class="pick ff-en fc-orange">00:25</div>
+    <div class="text-holder">
+        <p>刪掉文字文字文字文字文字</p>
+        <div class="fn">
+            <span href="" class="link fz-xs border gray">修改</span>
+            <span href="" class="link fz-xs border gray">刪除</span>
+        </div>
+    </div>
+</div>
+
+<div class="tl-item">
+    <div class="pick ff-en fc-orange">00:25</div>
+    <div class="text-holder">
+        <p>床前明月光，疑是地上霜。舉頭望明月，低頭思故鄉</p>
+        <div class="fn">
+            <span href="" class="link fz-xs border gray">修改</span>
+            <span href="" class="link fz-xs border gray">刪除</span>
+        </div>
     </div>
 </div>
 
 
+
+<div class="tl-item">
+    <div class="pick ff-en fc-orange">00:25</div>
+    <div class="text-holder">
+        <p>刪掉文字文字文字文字文字</p>
+        <div class="fn">
+            <span href="" class="link fz-xs border gray">修改</span>
+            <span href="" class="link fz-xs border gray">刪除</span>
+        </div>
+    </div>
+</div>
+
+<div class="tl-item">
+    <div class="pick ff-en fc-orange">00:25</div>
+    <div class="text-holder">
+        <p>床前明月光，疑是地上霜。舉頭望明月，低頭思故鄉</p>
+        <div class="fn">
+            <span href="" class="link fz-xs border gray">修改</span>
+            <span href="" class="link fz-xs border gray">刪除</span>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="tl-item">
+    <div class="pick ff-en fc-orange">00:25</div>
+    <div class="text-holder">
+        <p>刪掉文字文字文字文字文字</p>
+        <div class="fn">
+            <span href="" class="link fz-xs border gray">修改</span>
+            <span href="" class="link fz-xs border gray">刪除</span>
+        </div>
+    </div>
+</div>
+
+<div class="tl-item">
+    <div class="pick ff-en fc-orange">00:25</div>
+    <div class="text-holder">
+        <p>床前明月光，疑是地上霜。舉頭望明月，低頭思故鄉</p>
+        <div class="fn">
+            <span href="" class="link fz-xs border gray">修改</span>
+            <span href="" class="link fz-xs border gray">刪除</span>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="tl-item">
+    <div class="pick ff-en fc-orange">00:25</div>
+    <div class="text-holder">
+        <p>刪掉文字文字文字文字文字</p>
+        <div class="fn">
+            <span href="" class="link fz-xs border gray">修改</span>
+            <span href="" class="link fz-xs border gray">刪除</span>
+        </div>
+    </div>
+</div>
+
+<div class="tl-item">
+    <div class="pick ff-en fc-orange">00:25</div>
+    <div class="text-holder">
+        <p>床前明月光，疑是地上霜。舉頭望明月，低頭思故鄉</p>
+        <div class="fn">
+            <span href="" class="link fz-xs border gray">修改</span>
+            <span href="" class="link fz-xs border gray">刪除</span>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="tl-item">
+    <div class="pick ff-en fc-orange">00:25</div>
+    <div class="text-holder">
+        <p>刪掉文字文字文字文字文字</p>
+        <div class="fn">
+            <span href="" class="link fz-xs border gray">修改</span>
+            <span href="" class="link fz-xs border gray">刪除</span>
+        </div>
+    </div>
+</div>
+
+<div class="tl-item">
+    <div class="pick ff-en fc-orange">00:25</div>
+    <div class="text-holder">
+        <p>床前明月光，疑是地上霜。舉頭望明月，低頭思故鄉</p>
+        <div class="fn">
+            <span href="" class="link fz-xs border gray">修改</span>
+            <span href="" class="link fz-xs border gray">刪除</span>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="tl-item">
+    <div class="pick ff-en fc-orange">00:25</div>
+    <div class="text-holder">
+        <p>刪掉文字文字文字文字文字</p>
+        <div class="fn">
+            <span href="" class="link fz-xs border gray">修改</span>
+            <span href="" class="link fz-xs border gray">刪除</span>
+        </div>
+    </div>
+</div>
+
+<div class="tl-item">
+    <div class="pick ff-en fc-orange">00:25</div>
+    <div class="text-holder">
+        <p>床前明月光，疑是地上霜。舉頭望明月，低頭思故鄉</p>
+        <div class="fn">
+            <span href="" class="link fz-xs border gray">修改</span>
+            <span href="" class="link fz-xs border gray">刪除</span>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="tl-item">
+    <div class="pick ff-en fc-orange">00:25</div>
+    <div class="text-holder">
+        <p>刪掉文字文字文字文字文字</p>
+        <div class="fn">
+            <span href="" class="link fz-xs border gray">修改</span>
+            <span href="" class="link fz-xs border gray">刪除</span>
+        </div>
+    </div>
+</div>
+
+<div class="tl-item">
+    <div class="pick ff-en fc-orange">00:25</div>
+    <div class="text-holder">
+        <p>床前明月光，疑是地上霜。舉頭望明月，低頭思故鄉</p>
+        <div class="fn">
+            <span href="" class="link fz-xs border gray">修改</span>
+            <span href="" class="link fz-xs border gray">刪除</span>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="tl-item">
+    <div class="pick ff-en fc-orange">00:25</div>
+    <div class="text-holder">
+        <p>刪掉文字文字文字文字文字</p>
+        <div class="fn">
+            <span href="" class="link fz-xs border gray">修改</span>
+            <span href="" class="link fz-xs border gray">刪除</span>
+        </div>
+    </div>
+</div>
+
+<div class="tl-item">
+    <div class="pick ff-en fc-orange">00:25</div>
+    <div class="text-holder">
+        <p>床前明月光，疑是地上霜。舉頭望明月，低頭思故鄉</p>
+        <div class="fn">
+            <span href="" class="link fz-xs border gray">修改</span>
+            <span href="" class="link fz-xs border gray">刪除</span>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="tl-item">
+    <div class="pick ff-en fc-orange">00:25</div>
+    <div class="text-holder">
+        <p>刪掉文字文字文字文字文字</p>
+        <div class="fn">
+            <span href="" class="link fz-xs border gray">修改</span>
+            <span href="" class="link fz-xs border gray">刪除</span>
+        </div>
+    </div>
+</div>
+
+<div class="tl-item">
+    <div class="pick ff-en fc-orange">00:25</div>
+    <div class="text-holder">
+        <p>床前明月光，疑是地上霜。舉頭望明月，低頭思故鄉</p>
+        <div class="fn">
+            <span href="" class="link fz-xs border gray">修改</span>
+            <span href="" class="link fz-xs border gray">刪除</span>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="tl-item">
+    <div class="pick ff-en fc-orange">00:25</div>
+    <div class="text-holder">
+        <p>刪掉文字文字文字文字文字</p>
+        <div class="fn">
+            <span href="" class="link fz-xs border gray">修改</span>
+            <span href="" class="link fz-xs border gray">刪除</span>
+        </div>
+    </div>
+</div>
+
+<div class="tl-item">
+    <div class="pick ff-en fc-orange">00:25</div>
+    <div class="text-holder">
+        <p>床前明月光，疑是地上霜。舉頭望明月，低頭思故鄉</p>
+        <div class="fn">
+            <span href="" class="link fz-xs border gray">修改</span>
+            <span href="" class="link fz-xs border gray">刪除</span>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="tl-item">
+    <div class="pick ff-en fc-orange">00:25</div>
+    <div class="text-holder">
+        <p>刪掉文字文字文字文字文字</p>
+        <div class="fn">
+            <span href="" class="link fz-xs border gray">修改</span>
+            <span href="" class="link fz-xs border gray">刪除</span>
+        </div>
+    </div>
+</div>
+
+<div class="tl-item">
+    <div class="pick ff-en fc-orange">00:25</div>
+    <div class="text-holder">
+        <p>床前明月光，疑是地上霜。舉頭望明月，低頭思故鄉</p>
+        <div class="fn">
+            <span href="" class="link fz-xs border gray">修改</span>
+            <span href="" class="link fz-xs border gray">刪除</span>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="tl-item">
+    <div class="pick ff-en fc-orange">00:25</div>
+    <div class="text-holder">
+        <p>刪掉文字文字文字文字文字</p>
+        <div class="fn">
+            <span href="" class="link fz-xs border gray">修改</span>
+            <span href="" class="link fz-xs border gray">刪除</span>
+        </div>
+    </div>
+</div>
+
+<div class="tl-item">
+    <div class="pick ff-en fc-orange">00:25</div>
+    <div class="text-holder">
+        <p>床前明月光，疑是地上霜。舉頭望明月，低頭思故鄉</p>
+        <div class="fn">
+            <span href="" class="link fz-xs border gray">修改</span>
+            <span href="" class="link fz-xs border gray">刪除</span>
+        </div>
+    </div>
+</div>
+
+
+                        </div>
+                    </div>
+                    <div class="btn-area">
+                        <a class="btn border-blue btn-large" href="#">
+                            <i class="icon icon-46"></i>
+                            <span>儲存</span>
+                        </a>
+
+                        <button class="btn blue btn-large" data-openmodal="modal-2-6-1">
+                            <i class="icon icon-63"></i>
+                            <span>確認送出</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
         </div>
 
 
