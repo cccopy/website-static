@@ -127,6 +127,15 @@
         background-position: right top;
     }
 }
+.bg-mbship-intro {
+    background-color: $color-bg-yellow;
+    background: $color-bg-yellow url("../images/bg/bg-mbship-intro.png") no-repeat center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include xs_lg {
+        background-position: left top;
+    }
+}
 
 .bg-3-7-3 {
     background-color: $color-bg-yellow;

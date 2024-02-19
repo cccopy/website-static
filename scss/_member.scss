@@ -11,6 +11,9 @@
         width: 100%;
         padding-bottom: 99.2%;
     }
+    &.level-0 {
+        background-image: url("../images/level-0.svg");
+    }
     &.level-1 {
         background-image: url("../images/level-1.svg");
     }
@@ -379,5 +382,194 @@
     .btn-area {
         padding-top: 0 !important;
         padding-bottom: $pd-xs * 2 !important;
+    }
+}
+
+.mbship-item {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background-color: #fff;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 20px 0px;
+    margin: 0 6px;
+    border-bottom: 18px solid #d8d2cb;
+    overflow: hidden;
+    @include xs_lg {
+        min-width: 220px;
+    }
+    > li {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        padding: $pd-xs;
+        min-height: 7em;
+        @include lg {
+            min-height: 10em;
+        }
+        &:after {
+            content: "";
+            display: block;
+            width: calc(100% - #{$pd-xs * 2});
+            height: 1px;
+            border-bottom: 1px solid $color-border;
+            position: absolute;
+            left: $pd-xs;
+            bottom: 0;
+        }
+        &:last-of-type {
+            &:after {
+                display: none;
+            }
+        }
+        &.intro {
+            height: 16em;
+            @include md {
+                height: 18em;
+            }
+            & + li {
+                min-height: 10em;
+            }
+            .fz-B {
+                margin-bottom: 1em;
+                color: $color-second-dark;
+            }
+            &:after {
+                display: none;
+            }
+        }
+    }
+    .level-icon {
+        display: block;
+        margin-bottom: 1em;
+    }
+
+    strong {
+        font-weight: bold;
+        font-size: 1.25em;
+    }
+    &.order-1 {
+        border-radius: 40px 0 0 40px;
+
+        > li {
+            &.intro {
+                background-color: #d8d2cb;
+            }
+        }
+    }
+    &.order-2 {
+        border-radius: 0 40px 40px 0;
+        border-color: #fbd496;
+        > li {
+            &.intro {
+                background-color: #fbd496;
+            }
+        }
+    }
+    &.order-3 {
+        border-radius: 40px 0 0 40px;
+        border-color: $color-second;
+        box-shadow: rgba($color-second, 0.5) 0px 7px 20px 0px;
+        > li {
+            &.intro {
+                background-color: $color-second;
+            }
+        }
+    }
+    &.order-4 {
+        border-radius: 0;
+        border-color: $color-second;
+        box-shadow: rgba($color-second, 0.5) 0px 7px 20px 0px;
+        > li {
+            &.intro {
+                background-color: $color-second;
+            }
+        }
+    }
+    &.order-5 {
+        border-radius: 0 40px 40px 0;
+        border-color: $color-second;
+        box-shadow: rgba($color-second, 0.5) 0px 7px 20px 0px;
+        > li {
+            &.intro {
+                background-color: $color-second;
+            }
+        }
+    }
+}
+.mbship-container {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: $pd-xs * 2.5;
+
+    @include xs_lg {
+        overflow-x: auto;
+        padding-left: $pd-xs;
+        padding-right: $pd-xs;
+    }
+    @include lg {
+        width: 88%;
+        min-width: 960px;
+        margin: 0 auto;
+    }
+    @include xl {
+        width: 80%;
+        min-width: 960px;
+    }
+    @include xxl {
+        width: 70%;
+        min-width: 1200px;
+        padding-bottom: $pd-xs * 3;
+    }
+    @include xxxl {
+        min-width: 1400px;
+    }
+    .group-title {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        padding-bottom: $gap;
+        position: absolute;
+        left: 0;
+        top: 0;
+        .fz-C {
+            width: 25%;
+            text-align: center;
+        }
+        &.has-text {
+            &:before,
+            &:after {
+                content: "";
+                display: block;
+                width: 20%;
+                height: 30%;
+                flex-shrink: 0;
+                border-top: 2px solid $color-second-dark;
+            }
+            &:before {
+                border-left: 2px solid $color-second-dark;
+            }
+            &:after {
+                border-right: 2px solid $color-second-dark;
+            }
+        }
+    }
+    .group-1 {
+        flex: 2;
+        display: flex;
+        flex-wrap: nowrap;
+        padding-top: 50px;
+        position: relative;
+    }
+    .group-2 {
+        flex: 3;
+        display: flex;
+        flex-wrap: nowrap;
+        padding-top: 50px;
+        position: relative;
     }
 }

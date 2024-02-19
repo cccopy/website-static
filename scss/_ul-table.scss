@@ -11,9 +11,10 @@
         margin-bottom: $pd-xs;
         background-color: #fff;
         @include xs_xl {
-            border: 1px solid $color-border;
+            border: 2px solid #ddd;
             border-radius: $rd-form * 2;
             overflow: hidden;
+            margin-bottom: $pd-xs / 1.5;
         }
         @include xl {
             width: 100%;
@@ -39,18 +40,22 @@
             @include xs_xl {
                 border-bottom: 1px solid $color-border;
                 &:first-of-type {
-                    border-top: 5px solid $color-second;
+                    // border-top: 5px solid $color-second;
                 }
                 &:last-of-type {
                     border: none;
                 }
                 > div {
                     display: flex;
-                    padding: 0 10px;
+                    padding: 4px 10px;
                     min-height: 40px;
                     align-items: center;
                     justify-content: start;
                     text-align: left;
+                    &.flex-right {
+                        justify-content: flex-end;
+                        text-align: right;
+                    }
                 }
                 &:before {
                     content: attr(data-field);
@@ -100,6 +105,17 @@
                         display: none;
                     }
                 }
+                .flex-right {
+                    justify-content: flex-end;
+                    text-align: right;
+                    padding-right: $pd-xs;
+                    @include xl {
+                        padding-right: $pd-xs;
+                    }
+                    @include xxl {
+                        padding-right: $pd-xs * 2;
+                    }
+                }
                 &.flex-1 {
                     flex: 1;
                 }
@@ -125,6 +141,23 @@
             @include xxxl {
                 font-size: 1em;
                 min-height: 48px;
+            }
+        }
+    }
+    .discount {
+        .icon {
+            margin-right: 5px;
+        }
+        @include xs_xl {
+            border: 2px solid $color-second;
+        }
+        @include xl {
+            border-bottom: 2px solid $color-second;
+            div {
+                color: $color-second-dark;
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
         }
     }

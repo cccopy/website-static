@@ -284,6 +284,40 @@
                         }
                     }
                 }
+                &.img-holder {
+                    display: flex;
+                    width: 100%;
+                    flex-direction: column;
+                    border: 4px solid $color-border;
+                    background-color: $color-border;
+                    border-radius: $rd-form;
+                    transition: all 0.35s $ease;
+                    transition-property: background-color, border-color;
+                    .img {
+                        width: 100%;
+                        border-radius: $rd-form;
+                    }
+                    span {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 100%;
+                        padding: 3px 2px;
+                        overflow: hidden;
+                        text-overflow: initial;
+                        -webkit-line-clamp: initial;
+                        display: initial;
+                        height: initial;
+                        line-height: initial;
+                        -webkit-box-orient: initial;
+                        text-align: center;
+                    }
+                    &:before {
+                        position: absolute;
+                        right: 3px;
+                        top: 10px;
+                    }
+                }
             }
             &:checked {
                 & + label {
@@ -301,6 +335,13 @@
                                 background-size: 50% auto;
                                 background-position: center center;
                             }
+                        }
+                    }
+                    &.img-holder {
+                        border-color: $color-second;
+                        background-color: $color-second;
+                        span {
+                            color: #fff;
                         }
                     }
                 }
@@ -377,7 +418,32 @@
         cursor: pointer;
         min-width: 40px;
         padding: 0 10px;
-
+        &.btn-type {
+            min-width: 80px;
+            .fz-xs {
+                font-size: 0.875em !important;
+                @include xxxl {
+                    font-size: 1em !important;
+                }
+            }
+            .fc-orange {
+                color: #fff !important;
+            }
+            &:before {
+                content: "";
+                display: block;
+                position: absolute;
+                width: calc(100% - 4px);
+                height: calc(100% - 6px);
+                right: 3px;
+                top: 3px;
+                background-color: $color-second;
+                z-index: -1;
+                border-radius: 2px;
+                opacity: 1;
+                transition: opacity 0.3s $ease;
+            }
+        }
         // span {
         //     color: #fff;
         // }
@@ -400,6 +466,31 @@
             span {
                 transition: color 0.3s $ease;
             }
+            &.btn-type {
+                .fc-orange {
+                    color: #fff !important;
+                }
+                &:before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    width: calc(100% - 4px);
+                    height: calc(100% - 6px);
+                    right: 3px;
+                    top: 3px;
+                    background-color: $color-second;
+                    z-index: -1;
+                    border-radius: 2px;
+                    opacity: 1;
+                    transition: opacity 0.3s $ease;
+                    transition: background-color 0.35s $ease;
+                }
+                &:hover {
+                    &:before {
+                        background-color: #eb9100;
+                    }
+                }
+            }
             &:hover {
                 // span {
                 //     color: #fff;
@@ -409,6 +500,7 @@
                 }
             }
         }
+
         &.eye {
             .icon {
                 &:before {
@@ -520,7 +612,7 @@
             flex: initial;
         }
         .field {
-            display: none;
+            display: none !important;
         }
         &.center {
             .value {
@@ -998,6 +1090,65 @@ input:disabled + label {
         }
     }
 }
+
+.value {
+    .col-type {
+        display: flex;
+        flex-direction: column;
+        @include md {
+        }
+        .item {
+            margin-left: 0 !important;
+            & + .item {
+                margin-top: $gap;
+            }
+        }
+    }
+    .row-type {
+        @include xs_md {
+            display: flex;
+            flex-direction: column;
+        }
+        @include md {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .item {
+            @include xs_md {
+                margin-left: 0 !important;
+                & + .item {
+                    margin-top: $gap;
+                }
+            }
+            @include md {
+                & + .item {
+                    margin-left: $gap * 2 !important;
+                }
+            }
+        }
+        &.img-select {
+            .item {
+                @include xs_md {
+                    margin-left: 0 !important;
+                    & + .item {
+                        margin-top: $gap;
+                    }
+                }
+                @include md {
+                    width: calc(33.33% - #{$gap * 1.4});
+                    margin-bottom: $gap;
+                    & + .item {
+                        margin-left: $gap * 2 !important;
+                    }
+                    &:nth-of-type(3n + 1) {
+                        margin-left: 0 !important;
+                    }
+                }
+            }
+        }
+    }
+}
 .rating-container {
     display: flex;
     align-items: center;
@@ -1073,3 +1224,27 @@ input:disabled + label {
         }
     }
 }
+audio {
+    width: 100%;
+
+    &::-webkit-media-controls-play-button,
+    &::-webkit-media-controls-panel {
+        background-color: $color-second; /* 更改控制面板的背景顏色 */
+    }
+
+    // &::-webkit-media-controls-timeline {
+    //     background: $color-second; /* 更改進度條的顏色 */
+    // }
+
+    // &::-webkit-media-controls-volume-slider {
+    //     background: $color-second; /* 更改音量滑塊的顏色 */
+    // }
+}
+// #player {
+//     display: flex;
+//     align-items: center;
+// }
+// #progress-bar {
+//     flex-grow: 1;
+//     cursor: pointer;
+// }

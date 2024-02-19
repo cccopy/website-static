@@ -64,9 +64,11 @@
     @include xxl {
         font-size: 1.375em;
     }
-    // @include xxxl {
-    //     font-size: 1.5em;
-    // }
+    &.smaller {
+        @include xxl {
+            font-size: 1.25em;
+        }
+    }
 }
 //18
 .fz-E {

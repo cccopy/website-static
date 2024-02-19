@@ -43,6 +43,9 @@
     @include xxl {
         height: $header-xxl;
         padding-left: 200px;
+        padding-right: 190px;
+    }
+    @include xxxl {
         padding-right: 220px;
     }
     .left {
