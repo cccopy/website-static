@@ -23,46 +23,10 @@
     </head>
     <body>
 
-<header class="header logged">
+<header class="header">
     <a href="index.html" class="logo" title="CVO">CVO</a>
     <div class="fn">
-        <div class="nav-item has-dropmenu no-arrow for-member" data-dropmenu>
-            <a href="#" class="btn-member" data-trigger>
-                <div class="avatar">
-                    <i class="level-icon level-4"></i>
-                </div>
-            </a>
-            <div class="dropmenu small-col">
-                <a href="3-1-1.html">
-                    <i class="icon icon-9"></i>
-                    <span>帳戶設定&權限</span>
-                </a>
-                <a href="3-3.html">
-                    <i class="icon icon-10"></i>
-                    <span>我的收藏</span>
-                </a>
-                <a href="3-4.html">
-                    <i class="icon icon-6"></i>
-                    <span>我的E-Coupon</span>
-                </a>
-                <a href="3-5.html">
-                    <i class="icon icon-5"></i>
-                    <span>購物車</span>
-                </a>
-                <a href="3-6.html" class="--active">
-                    <i class="icon icon-7"></i>
-                    <span>我的AI樣品</span>
-                </a>
-                <a href="3-7.html">
-                    <i class="icon icon-8"></i>
-                    <span>訂單管理</span>
-                </a>
-                <a href="index.html" class="">
-                    <i class="icon icon-59"></i>
-                    <span>登出</span>
-                </a>
-            </div>
-        </div>
+        <a href="#" class="btn blue" data-openmodal="modal-3-2">登入 / 註冊</a>
         <a class="nav-toggle" href="#" id="nav-toggle">
             <div class="hamburger">
                 <span class="line line-1"></span>
@@ -118,283 +82,120 @@
 </nav>
 
 
-        <div class="page bg-member">
-            <div class="container">
-                <div class="breadcrumb">
-                    <a href="#">首頁</a>
-                    <a href="#">會員專區</a>
-                    <a href="#">購物車</a>
-                </div>
-            </div>
-            <div class="container layout-sidebar">
-                <div class="sidebar">
-                    <div class="sb-header">
-                        <h2 class="fz-D">會員專區</h2>
-                    </div>
-
-                    <div class="sb-body">
-                        <a href="3-1-1.html">
-                            <i class="icon icon-9"></i>
-                            <span>帳戶設定&權限</span>
-                        </a>
-                        <a href="3-3.html">
-                            <i class="icon icon-10"></i>
-                            <span>我的收藏</span>
-                        </a>
-                        <a href="3-4.html">
-                            <i class="icon icon-6"></i>
-                            <span>我的E-Coupon</span>
-                        </a>
-                        <a href="3-5.html" class="--active">
-                            <i class="icon icon-5"></i>
-                            <span>購物車</span>
-                        </a>
-                        <a href="3-6.html">
-                            <i class="icon icon-7"></i>
-                            <span>我的AI樣品</span>
-                        </a>
-                        <a href="3-7.html">
-                            <i class="icon icon-8"></i>
-                            <span>訂單管理</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="content">
-                    <div class="ct-header">
-                        <h1 class="fz-C">購物車</h1>
-                    </div>
-                    <div class="ct-body">
-                        <ul class="cart-flow">
-                            <li class="--active">
-                                <i class="icon icon-5"></i>
-                                <span class="fz-small">購物車明細</span>
-                            </li>
-                            <li class="--active">
-                                <i class="icon icon-12"></i>
-                                <span class="fz-small">確認訂單</span>
-                            </li>
-                            <li>
-                                <i class="icon icon-23"></i>
-                                <span class="fz-small">付款</span>
-                            </li>
-                            <li>
-                                <i class="icon icon-22"></i>
-                                <span class="fz-small">訂購完成</span>
-                            </li>
-                        </ul>
-
-                        <div class="ul-table">
-                            <ul class="th">
-                                <li class="flex-4">項目</li>
-                                <li class="flex-3 price">價格</li>
-                            </ul>
-
-                            <ul class="tr">
-                                <li class="flex-4" data-field="項目">
-                                    <div>七大政策說明明明</div>
-                                </li>
-                                <li class="flex-3 price" data-field="價格">
-                                    <div>100,000</div>
-                                </li>
-                            </ul>
-                            <ul class="tr">
-                                <li class="flex-4" data-field="項目">
-                                    <div>活動紀錄三天兩夜</div>
-                                </li>
-                                <li class="flex-3 price" data-field="價格">
-                                    <div>7,999</div>
-                                </li>
-                            </ul>
-                            <ul class="tr discount">
-                                <li class="flex-4" data-field="項目">
-                                    <div>
-                                        <i class="icon icon-6 orange"></i>
-                                        <span>促銷優惠：商品組合優惠折價</span>
-                                    </div>
-                                </li>
-                                <li class="flex-3 price" data-field="價格">
-                                    <div>-3,000</div>
-                                </li>
-                            </ul>
-                            <ul class="tr discount">
-                                <li class="flex-4" data-field="項目">
-                                    <div>
-                                        <i class="icon icon-6 orange"></i>
-                                        <span>常客優惠：少一張鈔票</span>
-                                    </div>
-                                </li>
-                                <li class="flex-3 price" data-field="價格">
-                                    <div>-1,000</div>
-                                </li>
-                            </ul>
-                            <ul class="tr no-field">
-                                <li class="flex-1 no-field">
-                                    <div class="flex-right">
-                                        <span class="fc-alert">訂單金額總計：</span> <strong class="fc-alert bold">NT. 200,000</strong>
-                                    </div>
-                                </li>
-                            </ul>
+        <div class="page">
+            <section class="gt-body bg-privacy">
+                <div class="container-s article-container">
+                    <div class="article">
+                        <div class="article-header" style="background-image: url('./images/bg/header-privacy-1.png')">
+                            <h1 class="fz-C">服務條款</h1>
                         </div>
-                        <div class="text-block alert">
-                            <h3 class="fz-D fc-alert">重要提醒</h3>
+                        <div class="edit">
+                            <h2 class="fz-E">認知與接受條款</h2>
 
+                            <p>
+                                錨點影音股份有限公司，係依據本服務條款提供CVO影音電商平台（https://www.cvo.com.tw/）服務(以下簡稱「本服務」)。當您使用本服務時，即表示您已閱讀、瞭解並同意接受本服務條款之所有內容。
+                            </p>
+                            <p>
+                                當您註冊成為CVO影音電商平台會員時，即表示您已閱讀、瞭解並同意接受本會員服務條款之所有內容。CVO影音電商平台有權於任何時間修改或變更本服務條款之內容，建議您隨時注意該等修改或變更。您於任何修改或變更後繼續使用本服務，視為您已閱讀、瞭解並同意接受該等修改或變更。如果您不同意本服務條款的內容，或者您所屬的國家或地域排除本服務條款內容之全部或部份時，您應立即停止使用本服務。
+                            </p>
+                            <p>
+                                若您為未滿二十歲，除應符合上述規定外，並應於您的家長（或監護人）閱讀、瞭解並同意本服務條款之所有內容及其後修改變更後，方得使用或繼續使用本服務。當您使用或繼續使用本服務時，即推定您的家長（或監護人）已閱讀、瞭解並同意接受本服務條款之所有內容及其後修改變更。
+                            </p>
+
+                            <h2 class="fz-E">與第三人網站的連結</h2>
+                            <p>
+                                本網站可能包括連到其他網站的連結，或是可能由其他網站存取，而由其他第三方所營運且可能含有第三方所提供服務、產品、材料、軟體與資訊。您使用該第三方網站係由您自行負擔相關風險，並適用其使用條款與隱私權條款。我們並不會為該第三方網站、服務或產品背書或承擔任何責任。
+                            </p>
+
+                            <h2 class="fz-E">您的註冊義務</h2>
+                            <p>為了能使用本服務，您同意以下事項：</p>
                             <ol class="ol">
-                                <li>完成付款後，若於7天內未完成素材提交，視為「取消訂單」，將扣除10%交易手續費後，直接進行 退款。</li>
-                                <li>「折扣碼優惠」僅適用於一般商品折抵，不適用於加購商品。</li>
-                                <li>付款完成後，可於3天內取消訂單，將扣除10%交易手續費後，進行退款。</li>
+                                <li>依本服務註冊表之提示提供您本人正確、最新及完整的資料，</li>
+                                <li>
+                                    維持並更新您個人資料，確保其為正確、最新及完整。若您提供任何錯誤或不實的資料，CVO影音電商平台有權暫停或終止您的帳號，並拒絕您使用本服務之全部或一部，且若因此造成您任何損害，均由您自行承擔，您不得以任何理由對錨點影音股份有限公司請求賠償。
+                                </li>
                             </ol>
-                        </div>
-
-                        <div class="form-container half">
-                            <div class="form-item">
-                                <div class="field">折扣碼</div>
-                                <div class="value">
-                                    <input type="text">
-                                    <div class="fn-area all-center" data-openmodal="modal-3-5-1">
-                                        <span class="fz-xs fc-orange bold">選擇折扣碼</span>
-                                    </div>
-                                </div>
-                                <div class="help-word"><i class="icon icon-13"></i>錯誤訊息</div>
-                            </div>
-                            <div class="form-item">
-                                <div class="field">結帳總金額</div>
-                                <div class="value">
-                                    <input type="text" value="200,000" disabled="disabled">
-                                </div>
-                                <div class="help-word"><i class="icon icon-13"></i>錯誤訊息</div>
-                            </div>
-                            <div class="form-item must">
-                                <div class="field">發票資訊</div>
-                                <div class="value">
-                                    <div class="multi-inline">
-                                        <div class="item">
-                                            <input type="radio" id="radio1" name="invoice" value="radio1" checked="checked">
-                                            <label for="radio1">個人戶</label>
-                                        </div>
-                                        <div class="item">
-                                            <input type="radio" id="radio2" name="invoice" value="radio2">
-                                            <label for="radio2">公司戶</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="help-word"><i class="icon icon-13"></i>錯誤訊息</div>
-                            </div>
-                            <div class="form-item full must">
-                                <div class="field">個人發票</div>
-                                <div class="value">
-                                    <div class="multi-inline">
-                                        <div class="item">
-                                            <input type="radio" id="idv1" name="invoiceIdv" value="radio1" checked="checked">
-                                            <label for="idv1">捐贈發票</label>
-                                        </div>
-                                        <div class="item">
-                                            <input type="radio" id="idv2" name="invoiceIdv" value="radio2">
-                                            <label for="idv2">手機條碼載具</label>
-                                        </div>
-                                        <div class="item">
-                                            <input type="radio" id="idv3" name="invoiceIdv" value="radio3">
-                                            <label for="idv3">自然人憑證載具</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="help-word"><i class="icon icon-13"></i>錯誤訊息</div>
-                            </div>
-                            
-                            <div class="form-item must">
-                                <div class="field">手機條碼載具</div>
-                                <div class="value">
-                                    <input type="text" placeholder="請輸入手機條碼載具(限大寫英數字)">
-                                </div>
-                                <div class="help-word"><i class="icon icon-13"></i>錯誤訊息</div>
-                            </div>
-                            
-                            <div class="form-item must">
-                                <div class="field">發票抬頭</div>
-                                <div class="value">
-                                    <input type="text" placeholder="請輸入發票抬頭">
-                                </div>
-                                <div class="help-word"><i class="icon icon-13"></i>錯誤訊息</div>
-                            </div>
-
-                            <div class="form-item must">
-                                <div class="field">統一編號</div>
-                                <div class="value">
-                                    <input type="text" placeholder="請輸入統一編號">
-                                </div>
-                                <div class="help-word"><i class="icon icon-13"></i>錯誤訊息</div>
-                            </div>
-
-                            <div class="form-item remark">
-                                <div class="field"></div>
-                                <div class="value">
-                                    <p class="fz-small fc-gray">
-                                        <i class="icon icon-30"></i>
-                                        開立之統一發票將扣除折扣後之款項。 (折扣碼優惠僅限折抵主商品，不得超過總商品金額5%)
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="form-item space"></div>
-
-                            
-                            <div class="form-item full text-only deco-line">
-                                <div class="text-center fc-gray">請詳細閱讀並同意合約內容</div>
-                            </div>
-                            <div class="form-item full textarea-read">
-                                <textarea name="" id="" cols="30" rows="10" readonly="readonly">
-1. 與甲方合作之期間，乙方同意其於合作範圍內所完成或設想之任何發明或創作、工作或任何形式之智慧財產權，其智慧財產權之歸屬包括但不限於專利、著作權、商業祕密及其他相關權利均應無償歸屬甲方所有，乙方並同意不行使著作人格權。
-
-2. 乙方應隨時告知甲方其於執行業務時發現之發明、改良物。該發明或改良物之所有權應歸屬甲方所有，且甲方無需支付額外費用予乙方；在甲方合理之要求及負擔費用之情形下，乙方應辦理一切必要手續及相關文件，俾使甲方對該發明或改良物取得完整且合法之權利。
-
-
-3. 未經甲方同意，乙方不得為任何形式之複製或主張，或申請登記為自己或第三人之智慧財產權；乙方應依甲方之需求協助甲方取得、確保及執行前述智慧財產權。
-4. 乙方聲明及保證，乙方得依本合約自由移轉發明物（如該發明物為乙方發明）、相關資訊及其他於合作期間構思、原創或製作之智慧財產權，並且無第三人得向乙方主張任何權利、質押、費用、任何種類的負擔，且乙方就此對第三人亦不負任何責任或義務。
-                                </textarea>
-                            </div>
-                            <div class="form-item full no-field must center">
-                                <div class="field">must</div>
-                                <div class="value">
-                                    <input type="checkbox" id="ck1" name="ck1" value="ck1">
-                                    <label for="ck1">我已詳細閱讀並同意合約內容</label>
-                                </div>
-                                <div class="help-word"><i class="icon icon-13"></i>請詳細閱讀並同意合約內容</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ct-footer">
-                        <div class="btn-area">
-                            <a class="btn disabled" href="3-5-3.html">
-                                <span>確認付款</span>
-                            </a>
+                            <h2 class="fz-E">會員帳號、密碼及安全</h2>
+                            非法、威脅、辱罵、騷擾、誹謗、欺騙、詐欺，侵犯他人隱私或冒充他人；
+                            包含明確或以圖形方式描述或記錄性行為（包括但不限於對另一個人或一群個人的暴力或威脅性的性語言），或以任何方式違反任何法令；
+                            基於宗教、性別、性取向、種族、民族、年齡或障礙而使一個人或一群個人遭迫害、騷擾、貶低或恐嚇；
+                            侵犯任何專利、商標、營業機密、著作權、著作人格權或任何他人權利；
+                            構成未經授權或未經同意的廣告、垃圾郵件或大量電子郵件、連鎖信件及任何其他形式的未經授權的招攬、任何形式的彩票或賭博；
+                            包含設計或預定用來破壞、損壞或限制任何軟硬體或電信設備的功能，或者包含損壞或獲得未經授權訪問任何第三方數據或其他資訊的軟體病毒或任何其他電腦程式碼、文件或程式；
+                            包含可用於確定本網站架構的措施，或可用於對網站進行反組譯、反彙編或反向工程的措施。
+                            <p>您同意不會上傳、分享或以其他方式散布提交內容：</p>
+                            <ul class="ul">
+                                <li>非法、威脅、辱罵、騷擾、誹謗、欺騙、詐欺，侵犯他人隱私或冒充他人；</li>
+                                <li>
+                                    包含明確或以圖形方式描述或記錄性行為（包括但不限於對另一個人或一群個人的暴力或威脅性的性語言），或以任何方式違反任何法令；
+                                </li>
+                                <li>基於宗教、性別、性取向、種族、民族、年齡或障礙而使一個人或一群個人遭迫害、騷擾、貶低或恐嚇；</li>
+                                <li>侵犯任何專利、商標、營業機密、著作權、著作人格權或任何他人權利；</li>
+                                <li>
+                                    構成未經授權或未經同意的廣告、垃圾郵件或大量電子郵件、連鎖信件及任何其他形式的未經授權的招攬、任何形式的彩票或賭博；
+                                </li>
+                                <li>
+                                    包含設計或預定用來破壞、損壞或限制任何軟硬體或電信設備的功能，或者包含損壞或獲得未經授權訪問任何第三方數據或其他資訊的軟體病毒或任何其他電腦程式碼、文件或程式；
+                                </li>
+                                <li>包含可用於確定本網站架構的措施，或可用於對網站進行反組譯、反彙編或反向工程的措施。</li>
+                            </ul>
+                            <p>
+                                我們不會為您的提交內容背書，但我們仍保有移除任何我們認定違反本服務條款或有害、令人反感或不準確的內容之權利。我們不會對任何移除該等內容所造成的失敗或遲延負責。除以上不當內容，您所上傳之圖像內容不會被做任何程度與方式的使用。
+                            </p>
+                            <p>
+                                您同意當我們懷疑您有違反服務條款之情事，我們得隨時自行決定中止您的帳號，且不負事前通知義務且無須對您補償。此外，您了解我們將會完全配合執法機關。
+                            </p>
+                            <h2 class="fz-E">使用者的守法義務及承諾</h2>
+                            <p>
+                                您承諾絕不為任何非法目的或以任何非法方式使用本服務，並承諾遵守中華民國相關法規及一切使用網際網路之國際慣例。您若係中華民國以外之使用者，並同意遵守所屬國家或地域之法令。您同意並保證不得利用本服務從事侵害他人權益或違法之行為，包括但不限於： 
+                            </p>
+                            <ul class="ul">
+                                <li>
+                                    公布或傳送任何誹謗、侮辱、具威脅性、攻擊性、不雅、猥褻、不實、違反公共秩序或善良風俗或其他不法之文字、圖片或任何形式的檔案於本服務及本服務所運作之網站上；
+                                </li>
+                                <li>侵害他人名譽、隱私權、營業秘密、商標權、著作權、專利權、其他智慧財產權及其他權利；</li>
+                                <li>違反依法律或契約所應負之保密義務；</li>
+                                <li>冒用他人名義使用本服務；</li>
+                                <li>傳輸或散佈電腦病毒；</li>
+                                <li>從事不法交易行為或張貼虛假不實、引人犯罪之訊息；</li>
+                                <li>販賣槍枝、毒品、禁藥、盜版軟體或其他違禁物；</li>
+                                <li>提供賭博資訊或以任何方式引誘他人參與賭博；</li>
+                                <li>濫發廣告郵件；</li>
+                                <li>其他錨點影音股份有限公司有正當理由認為不適當之行為。</li>
+                            </ul>
+                            <h2 class="fz-E">系統中斷或故障</h2>
+                            <p>
+                                本服務有時可能會出現中斷或故障等現象，或許將造成您使用上的不便、資料喪失、錯誤、遭人篡改或其他經濟上損失等情形。您於使用本服務時宜自行採取防護措施。錨點影音股份有限公司對於您因使用（或無法使用）本服務而造成的損害，不負任何賠償責任。
+                            </p>
+                            <h2 class="fz-E">資訊或建議</h2>
+                            <p>
+                                CVO影音電商平台對於您使用本服務或經由本服務連結之其他網站而取得之資訊或建議（包括但不限於，商務、投資理財、醫療、法律等方面），不擔保其為完全正確無誤。CVO影音電商平台對於本服務所提供之資訊或建議有權隨時修改或刪除。您在做出任何相關規劃與決定之前，仍應請教專業人員針對您的情況提出意見，以符合您的個別需求。
+                            </p>
+                            <h2 class="fz-E">廣告</h2>
+                            <p>
+                                錨點影音股份有限公司隨時會與其他公司、廠商等第三人（「內容提供者」）合作行銷服務，並由各該廣告商、產品與服務的供應商所設計與提供包括文字、圖片、音樂等不同內容，供錨點影音股份有限公司刊登與使用，錨點影音股份有限公司於刊登或使用時均將註明內容提供者。基於尊重內容提供者之智慧財產權，錨點影音股份有限公司對其所提供之內容並不做實質之審查或修改，您對於廣告之正確性與可信度應自行斟酌與判斷。錨點影音股份有限公司僅接受委託予以刊登，不對前述廣告負擔保責任。您若認為某些內容涉及侵權或有所不實，請逕向該內容提供者反應意見。
+                            </p>
+                            <h2 class="fz-E">智慧財產權的保護</h2>
+                            <p>
+                                本服務所使用之軟體或程式、網站上所有內容，包括但不限於著作、圖片、檔案、資訊、資料、網站架構、網站畫面的安排、網頁設計，均由錨點影音股份有限公司或其他權利人依法擁有其智慧財產權，包括但不限於商標權、專利權、著作權、營業秘密與專有技術等。任何人不得逕自使用、修改、重製、公開播送、改作、散布、發行、公開發表、進行還原工程、解編或反向組譯。若您欲引用或轉載前述軟體、程式或網站內容，必須依法取得錨點影音股份有限公司或其他權利人的事前書面同意。尊重智慧財產權是您應盡的義務，如有違反，您應對錨點影音股份有限公司負損害賠償責任（包括但不限於訴訟費用及律師費用等）。
+                            </p>
+                            <h2 class="fz-E">通知</h2>
+                            <p>
+                                如依法或其他相關規定須為通知時，CVO影音電商平台得以包括但不限於：電子郵件、一般信件、簡訊、多媒體簡訊、文字訊息、張貼於本服務網頁，或其他現在或未來合理之方式通知您，包括本服務條款之變更。但若您違反本服務條款，以未經授權的方式存取本服務，您將不會收到前述通知。當您經由授權的方式存取本服務，而同意本服務條款時，您即同意CVO影音電商平台所為之任何及所有給您的通知，都視為送達。
+                            </p>
+                            <h2 class="fz-E">拒絕或終止您的使用及移除會員內容 </h2>
+                            <p>
+                                您同意錨點影音股份有限公司得基於其自行之考量，因任何理由，包含但不限於缺乏使用，或錨點影音股份有限公司認為您已經違反本服務條款的明文規定及精神，終止您的密碼、帳號（或其任何部分）或本服務之使用，錨點影音股份有限公司亦有權（但無義務）拒絕或移除任何違反本服務條款之「會員內容」。錨點影音股份有限公司亦得依其自行之考量，於通知或未通知之情形下，隨時終止本服務或其任何部分。您同意依本服務條款任何規定提供之本服務，無需進行事先通知即得終止，您承認並同意，錨點影音股份有限公司得立即關閉或刪除您的帳號及您帳號中所有相關資料及檔案，及停止本服務之使用。此外，您同意若本服務之使用被終止，錨點影音股份有限公司對您或任何第三人均不承擔責任。 
+                            </p>
+                            <h2 class="fz-E">準據法與管轄法院</h2>
+                            <p>
+                                本會員服務條款之解釋與適用，以及與本會員服務條款有關的爭議，均應依照中華民國法律予以處理，並以台灣台北地方法院為第一審管轄法院。
+                            </p>
+                            <p>本服務使用條款更新於2024 年 3 月 1 日</p>
                         </div>
                     </div>
                 </div>
-            </div>
-
-<div class="dev">
-    <div class="container">
-        <h3 class="fz-D">這是可以刪除的，單純方便看彈窗</h3>
-        <button class="btn" data-openmodal="modal-3-1"><span>3-1 註冊(FB/Email)</span></button>
-        <button class="btn" data-openmodal="modal-3-1-2"><span>3-1-2 註冊成功</span></button>
-        <button class="btn" data-openmodal="modal-3-1-3"><span>3-1-3 驗證成功</span></button>
-        <button class="btn blue" data-openmodal="modal-3-1-1-2"><span>3-1-1-2 變更密碼</span></button>
-        <button class="btn blue" data-openmodal="modal-3-1-1-3"><span>3-1-1-3 變更行動電話</span></button>
-        <button class="btn blue" data-openmodal="modal-3-2-1"><span>3-2-1 忘記密碼</span></button>
-        <button class="btn blue" data-openmodal="modal-3-2-2"><span>3-2-2 忘記密碼 (Email已寄出)</span></button>
-        <button class="btn blue" data-openmodal="modal-3-2-3"><span>3-2-3 重設密碼</span></button>
-        <button class="btn blue" data-openmodal="modal-3-2"><span>3-2 登入</span></button>
-        <button class="btn blue" data-openmodal="modal-3-7-3-2"><span>3-7-3-2 成品已確認</span></button>
-        <button class="btn blue" data-openmodal="modal-3-7-4-1"><span>3-7-4-1 修改已提交</span></button>
-        <button class="btn" data-openmodal="modal-3-7-5"><span>3-7-5 用戶評價</span></button>
-        <button class="btn" data-openmodal="modal-3-7-5-1"><span>3-7-5-1 評價已提交</span></button>
-        <button class="btn brown" data-openmodal="modal-3-7-6"><span>3-7-6 取消訂單</span></button>
-        <button class="btn brown" data-openmodal="modal-3-7-6-2"><span>3-7-6-2 輸入銀行帳號</span></button>
-        <button class="btn brown" data-openmodal="modal-3-7-6-3"><span>3-7-6-3 取消成功</span></button>
-        <button class="btn brown" data-openmodal="modal-3-8-2-1"><span>3-8-2-1 表單已成功提交</span></button>
-    </div>
-</div>
-
-
+            </section>
         </div>
 
 

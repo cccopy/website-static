@@ -344,14 +344,16 @@
         padding: $pd-xs 0 !important;
     }
 }
-.appointment-container {
+.appointment-container,
+.article-container {
     padding-bottom: $pd-xs * 2;
     @include md {
         padding-top: $pd-xs;
         padding-bottom: $pd-xs * 3;
     }
 }
-.appointment-header {
+.appointment-header,
+.article-header {
     background: $color-second-dark url("../images/bg/bg-apo.svg") no-repeat right center;
     background-size: auto 100%;
     height: 120px;
@@ -366,7 +368,8 @@
         height: 150px;
     }
 }
-.appointment {
+.appointment,
+.article {
     background-color: #fff;
     overflow: hidden;
     border-radius: $rd;

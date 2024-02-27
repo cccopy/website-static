@@ -118,6 +118,24 @@
         background-size: contain;
     }
 }
+.bg-privacy {
+    background-color: #fff;
+    background: #fff url("../images/bg/bg-privacy.webp") no-repeat center top;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+.bg-faq {
+    background-color: #fff;
+    background: #fff url("../images/bg/bg-faqs.webp") no-repeat center center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+.bg-404 {
+    background-color: #fff;
+    background: #fff url("../images/bg/bg-404.webp") no-repeat center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 .bg-mbship-2 {
     background-color: $color-bg-yellow;
     background: $color-bg-yellow url("../images/bg/bg-mbship-2.webp") no-repeat center top;

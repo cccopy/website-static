@@ -332,43 +332,43 @@
     @include lg {
         display: flex;
         align-items: flex-end;
-        align-items: center;
+        // align-items: center;
         position: relative;
-        & + .container,
-        & + .container + .container,
-        & + .container + .container + .container,
-        & + .container + .container + .container + .container,
-        & + .container + .container + .container + .container + .container,
-        & + .container + .container + .container + .container + .container + .container,
-        & + .container + .container + .container + .container + .container + .container + .container {
-            position: relative;
-            &:after {
-                content: "";
-                display: block;
-                width: 15vw;
-                padding-bottom: 15vw;
-                background-size: contain;
-                background-image: url("../images/item/item-2n1.png");
-                background-repeat: no-repeat;
-                background-position: center;
-                position: absolute;
-                z-index: -1;
-                right: 0;
-                bottom: 0;
-                transform: translate(40%, 40%);
-                @include xxxl {
-                    transform: translate(80%, 25%);
-                }
-            }
-        }
+        // & + .container,
+        // & + .container + .container,
+        // & + .container + .container + .container,
+        // & + .container + .container + .container + .container,
+        // & + .container + .container + .container + .container + .container,
+        // & + .container + .container + .container + .container + .container + .container,
+        // & + .container + .container + .container + .container + .container + .container + .container {
+        //     position: relative;
+        //     &:after {
+        //         content: "";
+        //         display: block;
+        //         width: 15vw;
+        //         padding-bottom: 15vw;
+        //         background-size: contain;
+        //         background-image: url("../images/item/item-2n1.png");
+        //         background-repeat: no-repeat;
+        //         background-position: center;
+        //         position: absolute;
+        //         z-index: -1;
+        //         right: 0;
+        //         bottom: 0;
+        //         transform: translate(40%, 40%);
+        //         @include xxxl {
+        //             transform: translate(80%, 25%);
+        //         }
+        //     }
+        // }
 
-        & + .container + .container,
-        & + .container + .container + .container + .container,
-        & + .container + .container + .container + .container + .container + .container {
-            &:after {
-                background-image: url("../images/item/item-2n2.png");
-            }
-        }
+        // & + .container + .container,
+        // & + .container + .container + .container + .container,
+        // & + .container + .container + .container + .container + .container + .container {
+        //     &:after {
+        //         background-image: url("../images/item/item-2n2.png");
+        //     }
+        // }
     }
 
     img {
