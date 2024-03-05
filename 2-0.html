@@ -1995,6 +1995,67 @@
             });
         });
     }
+
+    if (document.querySelector("[data-fakeselect]")) {
+        document.addEventListener("DOMContentLoaded", function () {
+            var fakeSelects = document.querySelectorAll("[data-fakeselect]");
+
+            fakeSelects.forEach((element) => {
+                element.classList.add("fake-select-container");
+                var select = element.querySelector("select");
+                var fakeSelect = document.createElement("div");
+                fakeSelect.className = "fake-select";
+
+                var trigger = document.createElement("div");
+                trigger.className = "trigger";
+                trigger.textContent = select.options[select.selectedIndex].text;
+
+                var dropmenu = document.createElement("ul");
+                dropmenu.className = "dropmenu-inside";
+
+                Array.from(select.options).forEach(function (option) {
+                    var li = document.createElement("li");
+                    li.textContent = option.text;
+                    dropmenu.appendChild(li);
+
+                    // 點擊時更新原始選擇器和觸發器文字
+                    li.addEventListener("click", function () {
+                        // 移除所有li上的--active類別
+                        var allLis = dropmenu.querySelectorAll("li");
+                        allLis.forEach(function (otherLi) {
+                            otherLi.classList.remove("--active");
+                        });
+
+                        // 給當前被點擊的li添加--active類別
+                        this.classList.add("--active");
+
+                        // 更新選擇器值和顯示文字
+                        select.value = option.value;
+                        trigger.textContent = option.text;
+                        dropmenu.style.display = "none";
+                    });
+                });
+
+                fakeSelect.appendChild(trigger);
+                fakeSelect.appendChild(dropmenu);
+                select.parentNode.insertBefore(fakeSelect, select.nextSibling);
+
+                // 增加對 --active 類別的處理，以保持一致性
+                trigger.addEventListener("click", function () {
+                    var isVisible = dropmenu.style.display === "block";
+                    dropmenu.style.display = isVisible ? "none" : "block";
+                    trigger.classList.toggle("--active", !isVisible);
+                });
+                // 點擊除了偽選擇器以外的地方隱藏下拉選單
+                document.addEventListener("click", function (e) {
+                    if (!fakeSelect.contains(e.target)) {
+                        dropmenu.style.display = "none";
+                        trigger.classList.remove("--active"); // 確保在點擊外部時移除 --active 類別
+                    }
+                });
+            });
+        });
+    }
 </script>
 
 
@@ -2057,38 +2118,39 @@
             if (document.querySelector("[data-marquee]")) {
                 const marqueeHolder = document.querySelector("[data-marquee]");
                 const marquee = marqueeHolder.querySelector(".marquee");
-                const items = marqueeHolder.querySelectorAll(".item");
 
-                const itemWidth = items[0].offsetWidth;
-                const containerWidth = marquee.clientWidth;
+                // 等待頁面載入完成後計算尺寸並開始滾動
+                window.addEventListener("load", () => {
+                    const items = marqueeHolder.querySelectorAll(".item");
 
-                // 计算需要复制的 .item 数量
-                const numCopies = Math.ceil(containerWidth / itemWidth);
+                    const itemWidth = items[0].offsetWidth;
+                    const containerWidth = marqueeHolder.clientWidth;
 
-                // 复制 .item 到 marquee 中
-                for (let i = 0; i < numCopies; i++) {
-                    items.forEach((item) => {
-                        marquee.appendChild(item.cloneNode(true));
-                    });
-                }
+                    // 計算至少填滿一螢幕寬度的複製次數，這裡我們考慮至少兩倍畫面寬度
+                    const totalItemsWidth = items.length * itemWidth;
+                    const numCopiesNeeded = Math.ceil((2 * containerWidth) / totalItemsWidth);
 
-                let scrollPosition = 0;
-                const speed = 1; // 调整滚动速度
-
-                function updateMarquee() {
-                    scrollPosition -= speed;
-                    marquee.style.transform = `translateX(${scrollPosition}px)`;
-
-                    if (scrollPosition <= -containerWidth) {
-                        // 当滚动到一个 .item 的宽度时，将滚动位置重置到0
-                        scrollPosition = 0;
+                    for (let i = 0; i < numCopiesNeeded; i++) {
+                        items.forEach((item) => {
+                            marquee.appendChild(item.cloneNode(true));
+                        });
                     }
 
-                    requestAnimationFrame(updateMarquee);
-                }
+                    let scrollPosition = 0;
+                    const speed = 1; // 調整滾動速度
 
-                // 等待页面加载完成后再开始滚动
-                window.addEventListener("load", () => {
+                    function updateMarquee() {
+                        scrollPosition -= speed;
+                        if (-scrollPosition >= itemWidth) {
+                            marquee.append(marquee.querySelector(".item").cloneNode(true));
+                            marquee.removeChild(marquee.querySelector(".item"));
+                            scrollPosition += itemWidth;
+                        }
+                        marquee.style.transform = `translateX(${scrollPosition}px)`;
+
+                        requestAnimationFrame(updateMarquee);
+                    }
+
                     updateMarquee();
                 });
             }

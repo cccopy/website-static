@@ -469,30 +469,12 @@
 
 
                         </div>
-
-<div class="pagination_container">
-    <div class="pagination">
-        <a href="" class="pg-prev">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20.69" height="35.724" viewBox="0 0 20.69 35.724">
-                <path id="Path_1048" data-name="Path 1048" d="M4251.812,1807.106l15.034,15.034-15.034,15.034" transform="translate(-4248.983 -1804.278)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="4"/>
-            </svg>
-        </a>
-        <a href="" class="--active">1</a>
-        <span class="dot"></span>
-        <a href="">2</a>
-        <a href="">3</a>
-        <a href="">4</a>
-        <span class="dot"></span>
-        <a href="">10</a>
-        <a href="" class="pg-next">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20.69" height="35.724" viewBox="0 0 20.69 35.724">
-                <path id="Path_1048" data-name="Path 1048" d="M4251.812,1807.106l15.034,15.034-15.034,15.034" transform="translate(-4248.983 -1804.278)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="4"/>
-            </svg>
-        </a>
-    </div>
-</div>
-
-
+                        <div class="btn-area">
+                            <button class="btn border-orange">
+                                <i class="icon icon-50"></i>
+                                <span>MORE</span>
+                            </button>
+                        </div>
                     </div>
                     <div class="ct-footer"></div>
                 </div>
@@ -1718,6 +1700,67 @@
             RATINGSINPUTS.forEach(function (aStarInput) {
                 aStarInput.addEventListener("click", function (e) {
                     e.stopPropagation();
+                });
+            });
+        });
+    }
+
+    if (document.querySelector("[data-fakeselect]")) {
+        document.addEventListener("DOMContentLoaded", function () {
+            var fakeSelects = document.querySelectorAll("[data-fakeselect]");
+
+            fakeSelects.forEach((element) => {
+                element.classList.add("fake-select-container");
+                var select = element.querySelector("select");
+                var fakeSelect = document.createElement("div");
+                fakeSelect.className = "fake-select";
+
+                var trigger = document.createElement("div");
+                trigger.className = "trigger";
+                trigger.textContent = select.options[select.selectedIndex].text;
+
+                var dropmenu = document.createElement("ul");
+                dropmenu.className = "dropmenu-inside";
+
+                Array.from(select.options).forEach(function (option) {
+                    var li = document.createElement("li");
+                    li.textContent = option.text;
+                    dropmenu.appendChild(li);
+
+                    // 點擊時更新原始選擇器和觸發器文字
+                    li.addEventListener("click", function () {
+                        // 移除所有li上的--active類別
+                        var allLis = dropmenu.querySelectorAll("li");
+                        allLis.forEach(function (otherLi) {
+                            otherLi.classList.remove("--active");
+                        });
+
+                        // 給當前被點擊的li添加--active類別
+                        this.classList.add("--active");
+
+                        // 更新選擇器值和顯示文字
+                        select.value = option.value;
+                        trigger.textContent = option.text;
+                        dropmenu.style.display = "none";
+                    });
+                });
+
+                fakeSelect.appendChild(trigger);
+                fakeSelect.appendChild(dropmenu);
+                select.parentNode.insertBefore(fakeSelect, select.nextSibling);
+
+                // 增加對 --active 類別的處理，以保持一致性
+                trigger.addEventListener("click", function () {
+                    var isVisible = dropmenu.style.display === "block";
+                    dropmenu.style.display = isVisible ? "none" : "block";
+                    trigger.classList.toggle("--active", !isVisible);
+                });
+                // 點擊除了偽選擇器以外的地方隱藏下拉選單
+                document.addEventListener("click", function (e) {
+                    if (!fakeSelect.contains(e.target)) {
+                        dropmenu.style.display = "none";
+                        trigger.classList.remove("--active"); // 確保在點擊外部時移除 --active 類別
+                    }
                 });
             });
         });
