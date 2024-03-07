@@ -56,6 +56,7 @@
         display: flex;
         flex-wrap: wrap;
         padding-top: $pd-xs * 2;
+        align-items: flex-start;
     }
     .title-holder {
         transform-origin: center center;
@@ -83,9 +84,13 @@
         position: relative;
         overflow: hidden;
         display: flex;
+
         flex-direction: column;
         justify-content: center;
         padding-bottom: $pd-xs;
+        position: sticky;
+        top: 100px;
+        left: 0;
 
         .fz-B {
             text-align: center;
@@ -224,13 +229,47 @@
     }
     .cooking {
         width: clamp(360px, 46vw, 960px);
-        background: url("../images/item/cooking.webp") no-repeat center center;
-        background-size: contain;
+        position: relative;
+        margin-bottom: 1.5vh;
+        // background: url("../images/item/cooking.webp") no-repeat center center;
+        // background-size: contain;
         &:before {
             content: "";
             display: block;
             width: 100%;
-            padding-bottom: 50%;
+            padding-bottom: 61%;
+        }
+    }
+    .yellow {
+        width: 50%;
+        background: url("../images/item/cooking-yellow.png") no-repeat center center;
+        background-size: contain;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 2;
+        animation: swing-slash-left 1.2s step-end infinite forwards;
+        &:before {
+            content: "";
+            display: block;
+            width: 100%;
+            padding-bottom: 99%;
+        }
+    }
+    .blue {
+        width: 53.6%;
+        background: url("../images/item/cooking-blue.png") no-repeat center center;
+        background-size: contain;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
+        animation: swing-slash-right 1.2s step-end infinite forwards reverse;
+        &:before {
+            content: "";
+            display: block;
+            width: 100%;
+            padding-bottom: 109%;
         }
     }
     .fz-B {
@@ -240,6 +279,25 @@
             align-items: center;
             justify-content: center;
             line-height: 1.5em;
+        }
+    }
+    .text-loading {
+        display: inline-flex;
+        align-items: center;
+        vertical-align: middle;
+        @include xs_md {
+            margin-top: 0.5em;
+        }
+        span {
+            display: inline-block;
+            flex-shrink: 0;
+            animation: text-delay 1s linear infinite;
+            margin: -0.2em 0.05em 0;
+            @for $i from 1 through 8 {
+                &:nth-of-type(#{$i}) {
+                    animation-delay: 0.1s * ($i - 1);
+                }
+            }
         }
     }
     .dot-loading {
@@ -300,6 +358,7 @@
         transform: translate(-50%, -50%) rotate(-28deg);
     }
 }
+
 .dot-loading {
     display: inline-flex;
     height: 1.125em;
@@ -334,7 +393,18 @@
         transform: scale(0);
     }
 }
+@keyframes text-delay {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-0.35em);
+    }
 
+    100% {
+        transform: translateY(0);
+    }
+}
 .gnerate-finish {
     .part-bottom {
         padding-top: $pd-xs * 2;
@@ -343,6 +413,7 @@
     .btn-area {
         @include xs_md {
             flex-wrap: wrap;
+            padding-bottom: $pd-xs * 3;
             .btn {
                 margin-bottom: 0;
             }
@@ -507,6 +578,10 @@
                 left: 0%;
                 transform: translateY(50%);
             }
+        }
+        &.hide {
+            opacity: 0;
+            pointer-events: none;
         }
     }
     .chief {

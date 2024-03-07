@@ -331,7 +331,7 @@
     }
     @include lg {
         display: flex;
-        align-items: flex-end;
+        align-items: flex-start;
         // align-items: center;
         position: relative;
         // & + .container,

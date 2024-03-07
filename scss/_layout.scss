@@ -262,11 +262,15 @@
 }
 
 .not-found-holder {
-    width: clamp(320px, 44vw, 680px);
+    width: clamp(320px, 50vh, 680px);
     background: url("../images/item/404-1.png") no-repeat center center;
     background-size: contain;
     position: relative;
-    transform: translateY(-30%);
+    transform: translateY(-35%);
+
+    @include xxl {
+        width: clamp(320px, 60vh, 680px);
+    }
 
     &:before {
         content: "";

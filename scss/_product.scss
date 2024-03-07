@@ -8,6 +8,8 @@
     justify-content: center;
     background: url("../images/banner-prd.svg") no-repeat center;
     background-size: cover;
+    overflow: initial;
+    z-index: initial;
     @include xs_sm {
         background: none;
         background-color: $color-main-light;

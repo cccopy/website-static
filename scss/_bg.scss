@@ -123,12 +123,21 @@
     background: #fff url("../images/bg/bg-privacy.webp") no-repeat center top;
     background-size: 100% auto;
     background-repeat: no-repeat;
+    @include xs_lg {
+        background: #fff url("../images/bg/bg-privacy.webp") no-repeat center bottom;
+        background-size: 100% auto;
+    }
 }
 .bg-faq {
     background-color: #fff;
     background: #fff url("../images/bg/bg-faqs.webp") no-repeat center center;
     background-size: 100% auto;
     background-repeat: no-repeat;
+    @include xs_lg {
+        background: #fff url("../images/bg/bg-faqs.webp") no-repeat center bottom;
+        background-size: 100% auto;
+        background-color: #fff !important;
+    }
 }
 .bg-404 {
     background-color: #fff;

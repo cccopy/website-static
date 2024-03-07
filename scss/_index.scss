@@ -99,6 +99,11 @@
             margin-left: 0.5em;
         }
     }
+    input {
+        @include sm {
+            border-radius: 0 50px 50px 0;
+        }
+    }
 }
 .idx-video {
     // padding-top: 9vh;

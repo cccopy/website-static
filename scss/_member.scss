@@ -151,7 +151,8 @@
         box-shadow: $shadow;
         border: 1px solid $color-border;
         margin-bottom: $pd-xs;
-
+        padding-bottom: $pd-xs;
+        background-color: #fff;
         border-bottom: 5px solid #eee;
     }
     @include lg {
@@ -169,9 +170,17 @@
         display: block;
         padding-bottom: 1em;
     }
+    .btn-area {
+        @include lg {
+            justify-content: flex-start;
+        }
+    }
     .btn {
         & + .btn {
             margin-left: 10px;
+            @include xs_lg {
+                margin-bottom: 0;
+            }
         }
         @include xs_lg {
             padding: 0 1em;
@@ -204,6 +213,9 @@
 }
 .collection-container {
     padding-top: $pd-xs;
+    & + .btn-area {
+        padding-top: $pd-xs * 2;
+    }
 }
 
 .mb-benefits {
@@ -366,6 +378,16 @@
     }
     @include xxxl {
         height: 150px;
+    }
+}
+.appointment-header {
+    @include xs_md {
+        background-position: right -80px center;
+    }
+}
+.article-header {
+    @include xs_md {
+        background-position: right -200px center;
     }
 }
 .appointment,

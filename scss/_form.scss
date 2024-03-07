@@ -55,8 +55,7 @@
     }
     input,
     textarea,
-    select,
-    .fake-select {
+    select {
         border: none;
         background: none;
         outline: none;
@@ -164,7 +163,7 @@
             overflow-y: auto;
         }
     }
-    .fake-select,
+
     select {
         border-radius: $rd-form;
         width: 100%;
@@ -191,16 +190,16 @@
             border: 1px solid var(--color-border);
         }
     }
-    .fake-select {
-        overflow: hidden;
-        text-overflow: ellipsis;
-        -webkit-line-clamp: 1;
-        display: -webkit-box;
-        height: $form-height;
-        line-height: $form-height;
-        -webkit-box-orient: vertical;
-        margin-right: 0 !important;
-    }
+    // .fake-select {
+    //     overflow: hidden;
+    //     text-overflow: ellipsis;
+    //     -webkit-line-clamp: 1;
+    //     display: -webkit-box;
+    //     height: $form-height;
+    //     line-height: $form-height;
+    //     -webkit-box-orient: vertical;
+    //     margin-right: 0 !important;
+    // }
     input {
         &[type="text"],
         &[type="email"],
@@ -1248,3 +1247,107 @@ audio {
 //     flex-grow: 1;
 //     cursor: pointer;
 // }
+
+.fake-select-container {
+    position: relative;
+    select {
+        pointer-events: none;
+        opacity: 0;
+    }
+    .fake-select {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        //  background-color: #fff;
+    }
+    .trigger {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        padding: 0 10px;
+        cursor: pointer;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        position: relative;
+        &:before {
+            position: absolute;
+            content: "";
+            display: block;
+            width: 10px;
+            height: 10px;
+            background: url("../images/arrow-select.svg") no-repeat center;
+            background-size: contain;
+            right: 10px;
+            top: 50%;
+            transition: transform 0.35s $ease;
+            transform: translateY(-50%);
+        }
+        &.--active {
+            &:before {
+                transform: translateY(-50%) rotate(180deg);
+            }
+        }
+    }
+    .dropmenu-inside {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        transform: translateY(100%);
+        background-color: #fff;
+        border: 2px solid $color-border;
+        width: 100%;
+        border-radius: $rd;
+        overflow: hidden;
+        z-index: 999;
+        border-radius: 0 0 $rd $rd;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 19px 38px, rgba(0, 0, 0, 0.16) 0px 15px 12px;
+        display: none;
+        @include sm {
+            border-radius: $rd;
+        }
+        > li {
+            padding: 5px 10px;
+            // transition: background-color 0.2s $ease;
+            cursor: pointer;
+            user-select: none;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            &.--active {
+                background-color: $color-main-light;
+            }
+            @media (hover: hover) {
+                &:hover {
+                    background-color: $color-border;
+                    &.--active {
+                        background-color: $color-main-light;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.for-ct {
+    .trigger {
+        border: none;
+        background: none;
+        outline: none;
+        box-shadow: none;
+        -webkit-appearance: none;
+        appearance: none;
+        cursor: pointer;
+        border: 1px solid $form-border-color;
+        font-size: 1rem;
+        transition: border-color 0.3s ease;
+        height: $form-height;
+        box-sizing: border-box;
+        background-color: #fff;
+        font-family: $font-read;
+        color: #000;
+        border-radius: $rd-form;
+    }
+}
