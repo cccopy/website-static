@@ -53,6 +53,11 @@
             box-sizing: border-box;
         }
     }
+    @include md_lg {
+        &:after {
+            background: linear-gradient(to bottom, #fff, #fff);
+        }
+    }
     @include lg {
         border: 1px solid $black30;
         border-radius: $rd;
@@ -71,6 +76,9 @@
         }
     }
     .level-info {
+        @include xs_lg {
+            margin-top: $pd-xs * -1;
+        }
         ul {
             display: flex;
             flex-wrap: wrap;
@@ -80,44 +88,52 @@
         }
         .value {
             strong {
-                @include xs_md {
+                @include xs_lg {
                     font-size: 1.125em;
                     font-weight: bold;
                     line-height: 1.375em;
                 }
             }
             .fc-gray {
-                @include xs_md {
+                @include xs_lg {
                     color: #000 !important;
                 }
             }
         }
         .field {
-            @include xs_xl {
+            @include xs_lg {
                 min-width: 80px;
             }
-            @include xs_md {
+            @include xs_lg {
                 position: relative;
                 display: flex;
                 align-items: center;
                 color: #777;
                 padding-top: 10px;
                 font-size: 0.875em !important;
-                &:after {
-                    content: "";
-                    display: block;
-                    height: 1px;
-                    flex: 1;
-                    border-top: 1px dashed #ccc;
-                }
+                // &:after {
+                //     content: "";
+                //     display: block;
+                //     height: 1px;
+                //     flex: 1;
+                //     border-top: 1px dashed #ccc;
+                // }
             }
         }
         li {
-            @include md {
+            @include xs_lg {
+                border-bottom: 1px dashed #ccc;
+                padding-bottom: 6px;
+                &:last-of-type {
+                    border: none;
+                }
+            }
+            @include lg {
                 display: flex;
 
                 align-items: flex-end;
             }
+
             @include xl {
                 width: 50%;
                 &:last-of-type {
@@ -125,6 +141,13 @@
                     border-top: 1px solid $black30;
                     margin-top: 10px;
                     padding-top: 10px;
+                }
+                > ul {
+                    > li {
+                        border-top: none !important;
+                        padding-top: 0 !important;
+                        margin-top: 0 !important;
+                    }
                 }
                 &.expire {
                     justify-content: flex-end;
