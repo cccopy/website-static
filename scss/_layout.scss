@@ -218,6 +218,10 @@
     background-color: #ffefd1;
     //  border: 1px solid #edddc0;
     background: linear-gradient(160deg, #ffefd1, #ffefd1);
+
+    @include xs_md {
+        margin-top: 20px;
+    }
 }
 .text-block {
     background-color: #fff;
@@ -263,7 +267,6 @@
 
 .not-found-holder {
     width: clamp(320px, 50vh, 680px);
-    background: url("../images/item/404-1.png") no-repeat center center;
     background-size: contain;
     position: relative;
     transform: translateY(-35%);

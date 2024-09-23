@@ -1555,8 +1555,26 @@
 
             // 若影片播放時點擊暫停，則在 video-container 移除 --active 類別
             video.addEventListener("pause", function () {
+                console.log("in event pause");
                 element.classList.remove("--active");
             });
+
+            video.addEventListener("click", function () {
+                const seconds = Math.floor(video.currentTime);
+                const mins = Math.floor(seconds / 60);
+
+                const label = `${mins < 10 ? ("0" + mins) : mins}:${seconds < 10 ? ("0" + seconds) : seconds}`;
+                
+                console.log("in event click: ", label);
+
+                // to shows the input box
+            });
+
+            video.addEventListener("playing", function () {
+                console.log("in event playing");
+                element.classList.add("--active");
+            });
+
         });
     }
 

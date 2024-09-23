@@ -122,6 +122,8 @@ a {
     box-shadow: $shadow-deco;
     border-radius: $rd;
     overflow: hidden;
+    background-color: #000;
+    
     &::after {
         padding-top: 56.25%;
         display: block;
@@ -137,10 +139,13 @@ a {
     }
     video {
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: auto;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        max-height: 100%;
+        max-width: 100%;
+        margin: auto;
     }
     .cover-mask {
         position: absolute;
@@ -359,5 +364,20 @@ hr {
                 }
             }
         }
+    }
+}
+
+.cookie-declare {
+    height: 200px;
+    background-color: rgba(216,216,216,0.8);
+    position: fixed;
+    bottom: 0px;
+    width: 360px;
+    z-index: 1000;
+    font-size: 14px;
+    padding: 24px;
+
+    > p {
+        margin-bottom: 15px;
     }
 }

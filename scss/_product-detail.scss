@@ -168,7 +168,7 @@
         align-items: flex-end;
         justify-content: flex-end;
         padding-top: $pd-xs;
-        padding-bottom: $pd-xs * 2;
+        padding-bottom: $pd-xs / 2;
         .icon {
             margin-bottom: 3px;
         }
@@ -247,24 +247,22 @@
                 left: 0;
                 transform: translate(-50%, -10%);
             }
+
             &:after {
                 content: "";
                 display: block;
-                width: 12vw;
-                padding-bottom: 28%;
-                border: 6px solid $color-second;
-                border-radius: 3.33vw 0 0 0;
+                width: 50vw;
+                border-top: 6px solid $color-second;
                 position: absolute;
                 z-index: -1;
                 left: 0;
                 top: calc(50% - 3px);
                 transform: translate(-100%, 0);
-                border-right: none;
-                border-bottom: none;
             }
         }
     }
 }
+
 .applicable-list {
     display: flex;
     //   background-color: $color-second-light;
@@ -315,7 +313,7 @@
 
 .prd-footer {
     position: relative;
-    padding: $pd-xs 0 0;
+    padding: $pd-xs 0;
     @include lg {
         padding: 5vh 0;
     }
@@ -490,17 +488,13 @@
                 &:after {
                     content: "";
                     display: block;
-                    width: 15vw;
-                    padding-bottom: 40%;
-                    border: 6px solid $color-second;
-                    border-radius: 0 0 3.33vw 0;
+                    width: 50vw;
+                    border-bottom: 6px solid $color-second;
                     position: absolute;
                     z-index: -1;
                     right: 0;
                     bottom: calc(50% - 3px);
                     transform: translate(100%, 0);
-                    border-top: none;
-                    border-left: none;
                 }
             }
         }
@@ -514,6 +508,8 @@
         .right {
             display: flex;
             justify-content: flex-start;
+            overflow-x: hidden;
+
             &:after {
                 display: none;
             }
@@ -534,17 +530,6 @@
         white-space: nowrap;
         flex-wrap: nowrap;
         position: relative;
-        &::after {
-            content: "";
-            display: block;
-            width: 100%;
-            height: 6px;
-            border-top: 6px solid $color-second;
-            left: 0;
-            bottom: 20%;
-            z-index: -1;
-            position: absolute;
-        }
     }
     .marquee {
         display: flex;
@@ -553,7 +538,16 @@
 
         // position: absolute;
         // animation: marquee 10s linear infinite;
+
+        overflow-x: scroll;
+        -ms-overflow-style: none;  /* Internet Explorer and Edge */
+        scrollbar-width: none;  /* Firefox */
+        /* Hide the scrollbar for Chrome, Safari and Opera */
+        &::-webkit-scrollbar {
+            display: none;
+        }
     }
+
     .item {
         // border: 1px solid #000;
         user-select: none;
@@ -644,26 +638,32 @@
         // }
     }
 }
+
 @keyframes marquee {
     0% {
         transform: translateX(0);
     }
+
     100% {
         transform: translateX(-100%);
     }
 }
+
 .prd-process {
-    background: #fff url("../images/bg/bg-prd-2.png") no-repeat center bottom;
+    background: #fff no-repeat center bottom;
     background-size: contain;
     padding-bottom: 30.9vw;
-    padding-bottom: 22vw;
+    padding-bottom: 5vw;
     overflow: hidden;
+
     .slide-holder {
         padding-top: $pd-xs;
+
         @include xs_sm {
             padding-left: $pd-xs;
             padding-right: $pd-xs;
         }
+
         @include md {
             padding-top: $pd-xs * 2;
         }
@@ -774,6 +774,17 @@
         }
     }
 }
+
+.swiper-slide:last-child {
+    .prd-process-item {
+        .img-holder {
+            &:after {
+                display: none;
+            }
+        }
+    }
+}
+
 
 .upgrade {
     position: absolute;

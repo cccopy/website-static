@@ -10,9 +10,6 @@
     }
 }
 
-.bg-prd-list {
-}
-
 .bg-gnerate {
     background-color: $color-bg-yellow;
     @include md {
@@ -451,5 +448,17 @@
     animation: text-step 1.5s step-end infinite;
     &:after {
         padding-bottom: 187%;
+    }
+}
+
+.bg-prd-list {
+    .container-full{
+        z-index: 1;
+    }
+    .deco-8 {
+        z-index: 0;
+    }
+    .deco-7 {
+        z-index: 2;
     }
 }
