@@ -303,6 +303,16 @@
                 <div class="base"></div>
             </div>
         </div>
+        
+        <div href="" class="item" data-chief-id="1">
+            <div class="stage">
+                <i class="chief flexible"></i>
+                <h4 class="fz-E fc-brown">導演New</h4>
+                <div class="base"></div>
+            </div>
+            <style>div[data-chief-id="1"] .chief::before{ background-image: url(https://cvo-dev.s3.ap-southeast-1.amazonaws.com/experts/_583ebb7e2d.gif); }</style>
+        </div>
+
         <div href="" class="item">
             <div class="stage">
                 <i class="chief flexible chief-6"></i>
@@ -2123,45 +2133,45 @@
                 });
             }
 
-            if (document.querySelector("[data-marquee]")) {
-                const marqueeHolder = document.querySelector("[data-marquee]");
-                const marquee = marqueeHolder.querySelector(".marquee");
+            // if (document.querySelector("[data-marquee]")) {
+            //     const marqueeHolder = document.querySelector("[data-marquee]");
+            //     const marquee = marqueeHolder.querySelector(".marquee");
 
-                // 等待頁面載入完成後計算尺寸並開始滾動
-                window.addEventListener("load", () => {
-                    const items = marqueeHolder.querySelectorAll(".item");
+            //     // 等待頁面載入完成後計算尺寸並開始滾動
+            //     window.addEventListener("load", () => {
+            //         const items = marqueeHolder.querySelectorAll(".item");
 
-                    const itemWidth = items[0].offsetWidth;
-                    const containerWidth = marqueeHolder.clientWidth;
+            //         const itemWidth = items[0].offsetWidth;
+            //         const containerWidth = marqueeHolder.clientWidth;
 
-                    // 計算至少填滿一螢幕寬度的複製次數，這裡我們考慮至少兩倍畫面寬度
-                    const totalItemsWidth = items.length * itemWidth;
-                    const numCopiesNeeded = Math.ceil((2 * containerWidth) / totalItemsWidth);
+            //         // 計算至少填滿一螢幕寬度的複製次數，這裡我們考慮至少兩倍畫面寬度
+            //         const totalItemsWidth = items.length * itemWidth;
+            //         const numCopiesNeeded = Math.ceil((2 * containerWidth) / totalItemsWidth);
 
-                    for (let i = 0; i < numCopiesNeeded; i++) {
-                        items.forEach((item) => {
-                            marquee.appendChild(item.cloneNode(true));
-                        });
-                    }
+            //         for (let i = 0; i < numCopiesNeeded; i++) {
+            //             items.forEach((item) => {
+            //                 marquee.appendChild(item.cloneNode(true));
+            //             });
+            //         }
 
-                    let scrollPosition = 0;
-                    const speed = 1; // 調整滾動速度
+            //         let scrollPosition = 0;
+            //         const speed = 1; // 調整滾動速度
 
-                    function updateMarquee() {
-                        scrollPosition -= speed;
-                        if (-scrollPosition >= itemWidth) {
-                            marquee.append(marquee.querySelector(".item").cloneNode(true));
-                            marquee.removeChild(marquee.querySelector(".item"));
-                            scrollPosition += itemWidth;
-                        }
-                        marquee.style.transform = `translateX(${scrollPosition}px)`;
+            //         function updateMarquee() {
+            //             scrollPosition -= speed;
+            //             if (-scrollPosition >= itemWidth) {
+            //                 marquee.append(marquee.querySelector(".item").cloneNode(true));
+            //                 marquee.removeChild(marquee.querySelector(".item"));
+            //                 scrollPosition += itemWidth;
+            //             }
+            //             marquee.style.transform = `translateX(${scrollPosition}px)`;
 
-                        requestAnimationFrame(updateMarquee);
-                    }
+            //             requestAnimationFrame(updateMarquee);
+            //         }
 
-                    updateMarquee();
-                });
-            }
+            //         updateMarquee();
+            //     });
+            // }
 
             // 尋找所有具有data-popupvideo屬性的元素
             var popupvideo = document.querySelectorAll("[data-popupvideo]");

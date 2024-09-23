@@ -376,6 +376,11 @@
         }
         .img-holder {
             border-radius: $rd $rd 0 0;
+            background-color: #fff;
+
+            .video-container{
+                box-shadow: none;
+            }
         }
 
         @media (hover: hover) {
@@ -397,6 +402,7 @@
                 padding-right: $gap;
             }
             .fn-area {
+                width:100%;
                 background-color: #fff;
                 border-radius: 0 0 $rd $rd;
                 padding-bottom: 15px;

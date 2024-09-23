@@ -540,11 +540,22 @@
     align-items: flex-end;
     width: 100%;
     margin: 8vh 0 3vh;
+
+    @include xs_sm {
+        justify-content: center;
+    }
+
     .item {
+        display: flex;
+        justify-content: center;
         flex: 1;
         position: relative;
         isolation: isolate;
         padding-bottom: $pd-xs / 2;
+
+        @include xs_sm {
+            display: none;
+        }
 
         &:after {
             content: "";
@@ -559,7 +570,13 @@
             z-index: -1;
         }
         &.main-item {
-            flex: 2;
+            flex: 1.4;
+
+            @include xs_sm {
+                flex: 0.7;
+                display: flex;
+            }
+
             &:before {
                 content: "";
                 display: block;
