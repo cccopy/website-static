@@ -1,0 +1,284 @@
+.flow-item {
+    border-radius: 120px;
+    border-bottom: 10px solid $color-second;
+    position: relative;
+    margin-bottom: 56px;
+    @include xs_md {
+        border-radius: 38px;
+    }
+    .wrapper {
+        background: #ffffff;
+        border: 4px solid $color-second-dark;
+        border-radius: 120px;
+        display: flex;
+        justify-content: center;
+        padding: 0 $pd-xs;
+        min-height: 85px;
+        align-items: flex-end;
+        @include xs_md {
+            border-radius: 30px;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    .fz-D {
+        @include xs_md {
+            font-size: 1em;
+            text-align: center;
+        }
+    }
+    .fz-B {
+        padding-bottom: 0.15em;
+        @include xs_md {
+            font-size: 1.375em;
+        }
+        @include md_xl {
+            font-size: 1.625em;
+        }
+    }
+    .flow-chief {
+        @include xs_md {
+            order: 3;
+        }
+    }
+    .text-holder {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: $pd-xs * 0.75 $pd-xs * 2;
+        > .fz-B {
+            @include xs_lg {
+                white-space: nowrap;
+            }
+        }
+        @include xs_lg {
+            padding: $pd-xs;
+        }
+        @include xs_md {
+            order: 1;
+        }
+    }
+
+    &.to-next {
+        &:before {
+            content: "";
+            display: block;
+            width: 30px;
+            height: 15px;
+
+            background-color: $color-second; /* 自訂半圓形的顏色 */
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translate(-50%, 20px);
+        }
+        &:after {
+            content: "";
+            display: block;
+            width: 6px;
+            height: 100%;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            background-color: $color-second;
+            transform: translate(-50%, 100%);
+        }
+    }
+
+    .flow-step {
+        width: 100%;
+        display: flex;
+        padding: $pd-xs 0;
+        @include xs_md {
+        }
+        > div {
+            flex: 1;
+            background-color: #f5f5f5;
+            margin: 0 10px;
+            padding: 5px 25px 10px;
+            border-radius: 30px;
+            white-space: nowrap;
+            line-height: 1.125em;
+            position: relative;
+
+            @include xs_md {
+                font-size: 1.125em;
+                padding: 5px 15px 10px;
+            }
+            @include lg {
+                margin: 0 20px;
+            }
+            @include xl {
+                margin: 0 30px;
+            }
+            @include xxl {
+                margin: 0 40px;
+            }
+            @include xxxl {
+                margin: 0 60px;
+            }
+            &.yellow {
+                background-color: #ffefc8;
+            }
+        }
+    }
+    &.sp-red {
+        .flow-chief {
+            order: 0;
+            margin-top: $pd-xs;
+            @include md {
+                position: absolute;
+                left: 5%;
+            }
+            @include lg {
+                transform: translateY(-78px) scale(1.375);
+                flex-shrink: 0;
+                z-index: 8;
+            }
+
+            @include xxl {
+                left: 50%;
+                transform: translate(-500%, -80px) scale(1.375);
+            }
+        }
+    }
+}
+
+.arrow-bottom {
+    position: absolute;
+    width: 16px;
+    background: url("../images/flow/arow-down.svg") no-repeat center bottom;
+    background-size: 100% auto;
+    height: 110px;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 100%);
+    @include lg {
+        height: 105px;
+    }
+    @include xl {
+        width: 22px;
+    }
+    &:before {
+        content: "";
+        display: block;
+        width: 8px;
+        height: 8px;
+        background-color: $color-second;
+        position: absolute;
+        left: 4px;
+        top: -8px;
+        border-radius: 50%;
+        @include xl {
+            width: 14px;
+            height: 14px;
+        }
+    }
+}
+.arrow-right {
+    position: absolute;
+    height: 16px;
+    background: url("../images/flow/arow-right.svg") no-repeat right center;
+    background-size: auto 100%;
+    width: 26px;
+    right: 0;
+    top: 50%;
+    transform: translate(100%, -50%);
+    z-index: 3;
+    @include lg {
+        height: 22px;
+    }
+    @include xl {
+        width: 60px;
+    }
+    @include xxl {
+        width: 80px;
+    }
+    @include xxxl {
+        width: 120px;
+    }
+    &:before {
+        content: "";
+        display: block;
+        width: 8px;
+        height: 8px;
+        background-color: $color-second;
+        position: absolute;
+        left: -8px;
+        top: 4px;
+        border-radius: 50%;
+        @include lg {
+            width: 14px;
+            height: 14px;
+        }
+    }
+}
+.flow-start {
+    padding-top: 60px;
+    padding-bottom: 20px;
+}
+.flow-end {
+    padding-top: 20px;
+    padding-bottom: 60px;
+}
+.flow-chief {
+    height: 6em;
+    width: 6em;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    transform-origin: center bottom;
+
+    @include md {
+        transform: scale(1.375);
+    }
+    &:before {
+        content: "";
+        display: block;
+        width: 100%;
+        padding-bottom: 100%;
+    }
+    &.flow-1 {
+        width: 4.17em;
+        background-image: url("../images/flow/flow-1.svg");
+    }
+    &.flow-2 {
+        width: 6.4em;
+        background-image: url("../images/flow/flow-2.svg");
+    }
+    &.flow-3 {
+        width: 5.8em;
+        background-image: url("../images/flow/flow-3.svg");
+    }
+    &.flow-4 {
+        background-image: url("../images/flow/flow-4.svg");
+        width: 5.04em;
+    }
+    &.flow-5 {
+        background-image: url("../images/flow/flow-5.svg");
+        width: 4.6em;
+    }
+    &.flow-6 {
+        background-image: url("../images/flow/flow-6.svg");
+        width: 4.48em;
+    }
+    &.flow-7 {
+        background-image: url("../images/flow/flow-7.svg");
+        width: 8.48em;
+    }
+
+    &.space {
+        background-image: none;
+        @include xs_md {
+            display: none;
+        }
+    }
+}
