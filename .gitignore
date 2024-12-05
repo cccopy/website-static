@@ -16,3 +16,5 @@ config.php
 /_*
 /_*.*
 
+.DS_Store
+
